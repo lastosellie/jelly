@@ -19,11 +19,7 @@ public class Main extends Application {
 			
 			// fxml 파일에서 상위 레이아웃을 가져온다.
             FXMLLoader loader = new FXMLLoader();
-<<<<<<< HEAD
-            loader.setLocation(Main.class.getResource("Project.fxml"));
-=======
             loader.setLocation(Main.class.getResource("Chatting.fxml"));
->>>>>>> a0af23c551f116fd1b0e8173d9da26efdea86eac
 
             // 상위 레이아웃을 포함하는 scene을 보여준다.
             Scene scene = new Scene(loader.load());
