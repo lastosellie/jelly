@@ -13,9 +13,11 @@ public class Todo {
 	private int parentId;
 	private String content;
 
-	
 	public Todo() {
-		super();
+	}
+
+	public Todo(String title) {
+		this.title = title;
 	}
 
 	public Todo(String assignee, String title, LocalDate startDate, LocalDate endDate, String content) {
