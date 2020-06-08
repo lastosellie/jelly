@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="201.0" fitWidth="211.0" layoutX="95.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Desktop/jelly/mainima.PNG" />
+                  <Image url="@../../image/mainima.PNG" />
                </image>
             </ImageView>
             <TextField layoutX="128.0" layoutY="343.0" prefHeight="35.0" prefWidth="201.0" />
