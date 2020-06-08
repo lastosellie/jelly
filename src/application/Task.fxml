@@ -42,7 +42,14 @@
                      </VBox.margin>
                      <font>
                         <Font size="19.0" />
-                     </font></Label>
+                     </font>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></Label>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1">
@@ -627,22 +634,21 @@
       </GridPane>
       <Pane prefHeight="60.0" prefWidth="1000.0">
          <children>
-         	<Button fx:id="btnNMonth" layoutX="587.0" layoutY="14.0" mnemonicParsing="false"  style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
+         	<Button fx:id="btnNMonth" layoutX="587.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
             </Button>
-            <Button fx:id="btnToday" layoutX="440.0" layoutY="14.0" mnemonicParsing="false"  style="-fx-background-color: #0079c4; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
+            <Button fx:id="btnToday" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
                <font>
                	<Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnBMonth" layoutX="389.0" layoutY="14.0" mnemonicParsing="false"  style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
+            <Button fx:id="btnBMonth" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
             </Button>
-            <Button fx:id="btnAdd" alignment="CENTER" layoutX="882.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #10056e; -fx-background-radius: 100;" text="+일정추가" textFill="#fbfaff" />
          </children>
       </Pane>
       <HBox layoutX="-2.0" layoutY="80.0" prefHeight="29.0" prefWidth="1000.0">
