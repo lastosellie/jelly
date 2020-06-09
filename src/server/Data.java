@@ -40,11 +40,12 @@ public class Data implements Serializable {
 	public Data(String name, String message, int state, String timestamp) {
 		this(name, message, state, timestamp, null);
 	}
-	public Data (String name, String receiver, String message, int state) {
+	public Data (String name, String receiver, String message, int state, String timestamp) {
 		this.name = name;
 		this.receiver = receiver;
 		this.message = message;
 		this.state = state;
+		this.timestamp = timestamp;
 		
 	}
 	public String getName() {
