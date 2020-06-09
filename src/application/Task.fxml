@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TaskController">
    <children>
       <GridPane layoutX="-2.0" layoutY="116.0" prefHeight="484.0" prefWidth="1000.0">
         <columnConstraints>
@@ -263,7 +263,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox110" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox20" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -287,7 +287,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox111" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox21" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -311,7 +311,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox112" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox22" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -335,7 +335,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox113" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox23" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -359,7 +359,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox114" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox24" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -383,7 +383,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox115" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox25" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -407,7 +407,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox116" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox26" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -431,7 +431,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox117" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox27" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -455,7 +455,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox118" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox28" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -479,7 +479,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox119" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox29" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -503,7 +503,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox120" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox30" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -527,7 +527,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox121" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox31" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -551,7 +551,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox122" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox32" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -575,7 +575,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox123" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox33" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -599,7 +599,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox124" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox34" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -623,7 +623,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox125" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox35" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -647,7 +647,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox126" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox36" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -671,7 +671,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox127" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox37" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -695,7 +695,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox128" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox38" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -719,7 +719,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox129" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox39" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -743,7 +743,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox130" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox40" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -767,7 +767,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox131" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox41" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -791,7 +791,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox132" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox42" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -815,7 +815,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox133" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox43" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -839,7 +839,7 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox134" prefHeight="14.0" prefWidth="143.0">
+                  <HBox fx:id="hbox44" prefHeight="14.0" prefWidth="143.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -863,19 +863,19 @@
             </VBox>
          </children>
       </GridPane>
-      <Pane prefHeight="60.0" prefWidth="1000.0">
+      <Pane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #a89dab;">
          <children>
-         	<Button fx:id="btnNMonth" layoutX="587.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
+         	<Button fx:id="btnNMonth" layoutX="872.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
             </Button>
-            <Button fx:id="btnToday" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
+            <Button fx:id="btnToday" layoutX="422.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
                <font>
                	<Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnBMonth" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0079c4; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
+            <Button fx:id="btnBMonth" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
@@ -884,13 +884,13 @@
       </Pane>
       <HBox layoutX="-2.0" layoutY="80.0" prefHeight="29.0" prefWidth="1000.0">
          <children>
-            <Label prefHeight="31.0" prefWidth="142.8" text="             일" textFill="#f43939" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             월" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             화" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             수" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             목" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             금" />
-            <Label prefHeight="31.0" prefWidth="142.8" text="             토" textFill="#4744b2" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             sun" textFill="#f43939" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             mon" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             tue" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             wed" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             thu" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             fri" />
+            <Label prefHeight="31.0" prefWidth="142.8" text="             sat" textFill="#4744b2" />
          </children>
       </HBox>
    </children>
