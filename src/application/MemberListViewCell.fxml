@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="-Infinity" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
          <image>
