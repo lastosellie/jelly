@@ -18,10 +18,8 @@ import javafx.stage.Stage;
 import server.Data;
 import java.net.*;
 
-public class ChatController implements Initializable  {
+public class ChatController implements Initializable {
 
-	@FXML
-	private Pane Chatroom;
 	@FXML
 	private ComboBox Teamlist;
 	@FXML
@@ -29,34 +27,21 @@ public class ChatController implements Initializable  {
 	@FXML
 	private ImageView Send;
 	@FXML
-	private ChatClient client;
-	@FXML
 	private TextArea textarea;
-	
-	
-	
+
+	private ChatClient client;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resource) {
-	
-	   
+
 	}
+
 	@FXML
 	public void sendMsg(MouseEvent event) {
-		
+
 		String message = Inputmsg.getText();
 		System.out.println(message);
-		//이거 이제 서버로 보내서 textarea에 띄워야함
+		// 이거 이제 서버로 보내서 textarea에 띄워야함
 	}
-	    	
-	   
-		
-	}
-	
-	
-	
-	
-	
 
-	
-	
+}
