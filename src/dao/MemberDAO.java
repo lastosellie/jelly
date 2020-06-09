@@ -37,26 +37,28 @@ public class MemberDAO implements MemberSql {
 		return res;
 	}
 	
-	public List<Member> getSelectAll() throws Exception {
+	public List<Member> getSelectAll() {
 		Member vo = null; // 레코드 한줄 담을 객체
 		List<Member> all = new ArrayList<Member>(); // EMP 전체 리턴받을 객체
-		Connection con = getConnection();
+		
 		Statement stmt = null;
+		ResultSet rs = null;
 		try {
-			stmt = con.createStatement();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(select_all);
+			while (rs.next()) {
+				vo = new Member();
+				vo.setId(rs.getInt("ID"));
+				vo.setName(rs.getString("NAME"));
+				all.add(vo);
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			Close(rs);
+			Close(stmt);
 		}
-		ResultSet rs = stmt.executeQuery(select_all);
-		while (rs.next()) {
-			vo = new Member();
-			vo.setId(rs.getInt("ID"));
-			vo.setName(rs.getString("NAME"));
-			all.add(vo);
-		}
-		rs.close();
-		stmt.close();
-		Close(con);
+		
 		return all;
 	}
 	

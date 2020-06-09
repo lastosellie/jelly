@@ -3,8 +3,8 @@ import java.sql.*;
 import static common.JDBCTemplate.*;
 import java.util.List;
 
-import application.Member;
 import dao.MemberDAO;
+import vo.Member;
 
 public class MemberBiZ {
 	
@@ -15,7 +15,7 @@ public class MemberBiZ {
 		return res;
 	}
 
-	public List<Member> getAll_MyEmp() {
+	public List<Member> getSelectAll() {
 		Connection conn = getConnection();
 		List<Member> all = new MemberDAO(conn).getSelectAll();
 		Close(conn);
