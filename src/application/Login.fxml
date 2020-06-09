@@ -17,18 +17,7 @@
                   <Image url="@../../image/mainima.PNG" />
                </image>
             </ImageView>
-            <TextField layoutX="128.0" layoutY="343.0" prefHeight="35.0" prefWidth="201.0" />
-            <PasswordField layoutX="128.0" layoutY="396.0" prefHeight="35.0" prefWidth="201.0" />
-            <ImageView fitHeight="41.0" fitWidth="85.0" layoutX="36.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Desktop/jelly/mainima.PNG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="41.0" fitWidth="77.0" layoutX="36.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Desktop/jelly/mainima.PNG" />
-               </image>
-            </ImageView>
+            <TextField layoutX="92.0" layoutY="334.0" prefHeight="44.0" prefWidth="218.0" promptText="아이디" />
             <Button layoutX="75.0" layoutY="470.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: #8d72e7; -fx-background-radius: 100;" text="로그인">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
@@ -58,6 +47,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
+            <TextField layoutX="91.0" layoutY="399.0" prefHeight="44.0" prefWidth="218.0" promptText="비밀번호" />
          </children>
       </Pane>
    </children>

@@ -66,6 +66,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -83,6 +90,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -100,6 +114,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -117,6 +138,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -134,6 +162,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -168,6 +203,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -185,6 +227,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -202,6 +251,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -219,6 +275,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -236,6 +299,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -253,6 +323,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -270,6 +347,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -287,6 +371,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -304,6 +395,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -321,6 +419,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -338,6 +443,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -355,6 +467,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -372,6 +491,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -389,6 +515,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -406,6 +539,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -423,6 +563,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -440,6 +587,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -457,6 +611,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -474,6 +635,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -491,6 +659,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -508,6 +683,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -525,6 +707,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -542,6 +731,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -559,6 +755,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -576,6 +779,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -593,6 +803,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -610,6 +827,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
@@ -627,6 +851,13 @@
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                   </Label>
                </children>
             </VBox>
