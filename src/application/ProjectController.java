@@ -14,10 +14,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
@@ -26,6 +29,7 @@ import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.util.Callback;
 
 public class ProjectController implements Initializable {
 
@@ -33,12 +37,29 @@ public class ProjectController implements Initializable {
 	private GridPane gridPane;
 	@FXML
 	private TreeTableView<Todo> treeTableView;
-
+	@FXML
+	private ListView memberList;
+	
 	private ArrayList<Todo> todoList = new ArrayList<>();
+	private ObservableList<Member> memberObservableList;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
+		memberObservableList = FXCollections.observableArrayList();
+
+        //add some Students
+		memberObservableList.addAll(
+                new Member("John Doe", Member.GENDER.MALE),
+                new Member("Donte Dunigan", Member.GENDER.MALE),
+                new Member("Gavin Genna", Member.GENDER.MALE),
+                new Member("Darin Dear", Member.GENDER.MALE),
+                new Member("Pura Petty", Member.GENDER.FEMALE),
+                new Member("Herma Hines", Member.GENDER.FEMALE)
+        );
+		memberList.setItems(memberObservableList);
+		memberList.setCellFactory(memberList -> new MemberListCell());
+		
 		todoList.add(new Todo("홍길동", "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1"));
 		todoList.add(new Todo("정길동", "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2"));
 		todoList.add(new Todo("이길동", "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3"));
