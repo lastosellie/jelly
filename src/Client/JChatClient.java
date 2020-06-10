@@ -58,10 +58,8 @@ public class JChatClient implements Runnable {
 		while (!stop) {
 			try {
 				Object obj = ois.readObject(); // 서버에서 보낸 내용 받기
-				if (obj instanceof JChatData) {
-					for (IClient subscriber : subscribers) {
-						subscriber.receive(obj);
-					}
+				for (IClient subscriber : subscribers) {
+					subscriber.receive(obj);
 				}
 			} catch (IOException e) {
 				System.err.println("run method IOException");
@@ -83,7 +81,7 @@ public class JChatClient implements Runnable {
 		}
 	}
 
-	public void sendToServer(IClient sender, JChatData data) {
+	public void sendToServer(IClient sender, Object data) {
 		try {
 			subscribers.add(sender);
 			oos.writeObject(data);

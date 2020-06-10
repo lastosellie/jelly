@@ -143,7 +143,7 @@ public class GanttChart {
 
 		for (Todo todo : todoList) {
 			Task task = new Task(todo.getTitle(), date(todo.getStartDate()), date(todo.getEndDate()));
-			task.setPercentComplete(0.5);
+			task.setPercentComplete(todo.getProgress());
 			ts.add(task);
 		}
 		// s1.
