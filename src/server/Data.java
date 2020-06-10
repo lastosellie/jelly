@@ -5,11 +5,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Vector;
 
+
 public class Data implements Serializable {
 	private String name; 
 	private String receiver; 
 	private String message; 
-	private String timestamp;
 	private int state; 
 	
 	
@@ -27,25 +27,25 @@ public class Data implements Serializable {
 	public Data() {}
 	
 	
-	public Data(String name, String message, int state, String timestamp, ObjectOutputStream o) {
+	public Data(String name, String message, int state, ObjectOutputStream o) {
 		super();
 		this.name = name;
 		this.message = message;
 		this.state = state;
 		this.oos = o;
-		this.timestamp = timestamp;
+		
 		
 	}
 	
-	public Data(String name, String message, int state, String timestamp) {
-		this(name, message, state, timestamp, null);
+	public Data(String name, String message, int state) {
+		this(name, message, state, null);
 	}
 	public Data (String name, String receiver, String message, int state, String timestamp) {
 		this.name = name;
 		this.receiver = receiver;
 		this.message = message;
 		this.state = state;
-		this.timestamp = timestamp;
+		
 		
 	}
 	public String getName() {
@@ -86,12 +86,4 @@ public class Data implements Serializable {
 	}
 
 
-	public String getTimestamp() {
-		return timestamp;
-	}
-
-
-	public void setTimestamp(String timestamp) {
-		this.timestamp = timestamp;
-	}
 }
