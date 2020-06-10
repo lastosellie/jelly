@@ -27,159 +27,192 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
          	<VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);">
                 <children>
-                  <HBox fx:id="hbox1" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin></HBox>
-                  <Label fx:id="lbl00" text=" " textFill="#f43939">
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
+                  <Label fx:id="lbl0" text=" " textFill="RED">
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu></Label>
+                  </Label>
+                  <HBox fx:id="hbox0" prefHeight="14.0" prefWidth="143.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="lbl42" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <HBox fx:id="hbox42" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl84" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1">
                <children>
-                  <HBox fx:id="hbox11" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl001" text=" ">
+                  <Label fx:id="lbl1" text=" ">
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
                   </Label>
+                  <HBox fx:id="hbox1" prefHeight="14.0" prefWidth="143.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="lbl43" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox43" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl85" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2">
                <children>
-                  <HBox fx:id="hbox12" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl2" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox2" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl44" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl002" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox44" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl86" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3">
                <children>
-                  <HBox fx:id="hbox13" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl3" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox3" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl45" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl003" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox45" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl87" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4">
                <children>
-                  <HBox fx:id="hbox14" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl4" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox4" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl46" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl004" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox46" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl88" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5">
                <children>
-                  <HBox fx:id="hbox15" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl5" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox5" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl47" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl005" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox47" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl89" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6">
                <children>
-                  <HBox fx:id="hbox16" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl006" text=" " textFill="#4744b2">
+                  <Label fx:id="lbl6" text=" " textFill="BLUE">
                      <font>
                         <Font size="19.0" />
                      </font>
@@ -187,685 +220,1099 @@
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
                   </Label>
+                  <HBox fx:id="hbox6" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl48" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox48" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl90" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox17" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl7" text=" " textFill="RED">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox7" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl49" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl007" text=" " textFill="#f43939">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox49" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl91" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox18" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl8" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox8" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl50" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl008" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox50" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl92" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox19" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl9" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox9" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl51" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl009" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox51" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl93" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox20" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl10" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox10" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl52" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0010" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox52" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl94" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox21" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl11" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox11" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl53" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0011" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox53" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl95" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox22" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl12" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox12" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl54" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0012" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox54" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl96" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <children>
-                  <HBox fx:id="hbox23" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl0013" text=" " textFill="#4744b2">
+                  <Label fx:id="lbl13" text=" " textFill="BLUE">
                      <font>
                         <Font size="19.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
                   </Label>
+                  <HBox fx:id="hbox13" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl55" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox55" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl97" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox24" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl14" text=" " textFill="RED">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox14" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl56" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0014" text=" " textFill="#f43939">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox56" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl98" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox25" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl15" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox15" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl57" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0015" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox57" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl99" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox26" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl16" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox16" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl58" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0016" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox58" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl100" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox27" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl17" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox17" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl59" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0017" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox59" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl101" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox28" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl18" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox18" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl60" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0018" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox60" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl102" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox29" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl19" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox19" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl61" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0019" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox61" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl103" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <children>
-                  <HBox fx:id="hbox30" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl0020" text=" " textFill="#4744b2">
+                  <Label fx:id="lbl20" text=" " textFill="BLUE">
                      <font>
                         <Font size="19.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
                   </Label>
+                  <HBox fx:id="hbox20" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl62" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox62" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl104" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox31" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl0021" text=" " textFill="#f43939">
+                  <Label fx:id="lbl21" text=" " textFill="RED">
                      <font>
                         <Font size="19.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
                   </Label>
+                  <HBox fx:id="hbox21" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl63" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox63" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl105" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox32" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl22" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox22" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl64" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0022" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox64" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl106" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox33" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl23" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox23" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl65" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0023" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox65" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl107" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox34" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl24" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox24" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl66" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0024" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox66" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl108" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox35" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl25" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox25" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl67" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0025" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox67" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl109" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox36" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl26" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox26" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl68" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0026" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox68" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl110" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="3">
                <children>
-                  <HBox fx:id="hbox37" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl27" text=" " textFill="BLUE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox27" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl69" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0027" text=" " textFill="#4744b2">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox69" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl111" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox38" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl28" text=" " textFill="RED">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox28" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl70" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0028" text=" " textFill="#f43939">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox70" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl112" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox39" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl29" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox29" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl71" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0029" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox71" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl113" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox40" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl30" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox30" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl72" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0030" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox72" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl114" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox41" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl31" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox31" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl73" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0031" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox73" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl115" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox42" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl32" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox32" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl74" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0032" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox74" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl116" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox43" prefHeight="14.0" prefWidth="143.0">
+                  <Label fx:id="lbl33" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox33" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl75" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <Label fx:id="lbl0033" text=" ">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
-                  </Label>
+                  <HBox fx:id="hbox75" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl117" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <children>
-                  <HBox fx:id="hbox44" prefHeight="14.0" prefWidth="143.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Label fx:id="lbl0034" text=" " textFill="#4744b2">
+                  <Label fx:id="lbl34" text=" " textFill="BLUE">
                      <font>
                         <Font size="19.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="6.0" top="3.0" />
                      </VBox.margin>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
                   </Label>
+                  <HBox fx:id="hbox34" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl76" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox76" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl118" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl35" text=" " textFill="RED">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="6.0" top="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox fx:id="hbox35" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl77" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox77" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl119" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl36" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox36" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl78" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox78" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl120" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl37" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox37" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl79" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox79" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl121" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl38" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox38" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl80" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox80" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl122" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl39" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox39" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl81" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox81" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl123" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl40" text=" ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox40" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl82" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox82" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl124" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black black black black; -fx-border-style: segments(3, 3, 3, 3);" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="lbl41" text=" " textFill="BLUE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbox41" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl83" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox83" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl125" text=" ">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>
       </GridPane>
       <Pane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #a89dab;">
          <children>
-         	<Button fx:id="btnNMonth" layoutX="872.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
+         	<Button fx:id="btnNMonth" layoutX="872.0" layoutY="14.0" mnemonicParsing="false" onAction="#nMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
@@ -875,7 +1322,7 @@
                	<Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnBMonth" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
+            <Button fx:id="btnBMonth" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" onAction="#bMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
