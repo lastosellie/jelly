@@ -17,10 +17,12 @@ public class Todo {
 	public Todo() {
 	}
 
-	public Todo(int projectId, String title, LocalDate startDate, LocalDate endDate, String content,
+	public Todo(int projectId, int id, String title, String assignee, LocalDate startDate, LocalDate endDate, String content,
 			Double progress) {
 		this.projectId = projectId;
+		this.id = id;
 		this.title = title;
+		this.assignee = assignee;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.content = content;
@@ -28,17 +30,9 @@ public class Todo {
 		this.assignee = ClientInfo.UserName;
 	}
 	
-	public Todo(int projectId, int id, String title, LocalDate startDate, LocalDate endDate, String content,
+	public Todo(int projectId, String title, String assignee, LocalDate startDate, LocalDate endDate, String content,
 			Double progress) {
-		this.projectId = projectId;
-		this.id = id;
-		this.title = title;
-		this.startDate = startDate;
-		this.endDate = endDate;
-		this.content = content;
-		this.progress = progress;
-
-		this.assignee = ClientInfo.UserName;
+		this(projectId, 0, title, assignee, startDate, endDate, content, progress);
 	}
 
 	public int getProjectId() {

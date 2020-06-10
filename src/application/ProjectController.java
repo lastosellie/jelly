@@ -32,7 +32,7 @@ import server.JChatServer;
 import server.JData;
 
 public class ProjectController implements Initializable, IClient {
-	
+
 	private int projectId = 1;
 
 	@FXML
@@ -64,9 +64,9 @@ public class ProjectController implements Initializable, IClient {
 		memberList.setItems(memberObservableList);
 		memberList.setCellFactory(memberList -> new MemberListCell());
 
-		todoList.add(new Todo(1, 1, "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1", 0.6));
-		todoList.add(new Todo(1, 2, "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2", 0.1));
-		todoList.add(new Todo(1, 3, "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3", 0.9));
+//		todoList.add(new Todo(1, 1, "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1", 0.6));
+//		todoList.add(new Todo(1, 2, "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2", 0.1));
+//		todoList.add(new Todo(1, 3, "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3", 0.9));
 
 		TreeTableColumn<Todo, String> treeTableColumn1 = new TreeTableColumn<>("Title");
 		TreeTableColumn<Todo, String> treeTableColumn2 = new TreeTableColumn<>("Assinee");
@@ -135,14 +135,15 @@ public class ProjectController implements Initializable, IClient {
 		dialog.setTitle("New Todo");
 		dialog.show();
 	}
-	
+
 	@FXML
 	public void sendJChatDataClicked(MouseEvent event) {
 		String message = textField.getText();
 		textField.setText("");
-		JChatClient.getInstance().sendToServer(this, new JChatData(ClientInfo.UserName, message, JChatData.CHAT_MESSAGE, ""));
+		JChatClient.getInstance().sendToServer(this,
+				new JChatData(ClientInfo.UserName, message, JChatData.CHAT_MESSAGE, ""));
 	}
-	
+
 	@FXML
 	public void sendJellyClicked(MouseEvent event) {
 		JChatClient.getInstance().sendToServer(this, new JData(JData.ADD_TODO));
@@ -151,13 +152,23 @@ public class ProjectController implements Initializable, IClient {
 	@Override
 	public void receive(Object data) {
 		if (data instanceof JChatData) {
-			JChatData jd = (JChatData)data;
+			JChatData jd = (JChatData) data;
 			if (jd.getState() == JChatData.CHAT_MESSAGE) {
 				textArea.appendText(jd.getName() + " : " + jd.getMessage());
 				textArea.appendText("\n");
 			}
 		} else if (data instanceof JData) {
-			
+			switch (((JData) data).getCommand()) {
+			case JData.ADD_TODO:
+				if (((JData) data).getResult() == 1) {
+					//JChatClient.getInstance().sendToServer(this, new JData(JData.GET_TODO));
+				}
+				break;
+			case JData.GET_TODO:
+				if (((JData) data).getResult() == 1) {
+				}
+				break;
+			}
 		}
 	}
 }
