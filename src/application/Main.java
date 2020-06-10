@@ -30,7 +30,7 @@ public class Main extends Application {
             System.out.println("javafx.version: " + System.getProperty("javafx.version"));
 		} catch(Exception e) {
 			e.printStackTrace();
-		}
+		}	
 	}
 	
 	public static void main(String[] args) {

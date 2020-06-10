@@ -29,9 +29,8 @@ public class MemberListViewControl {
     
 	public MemberListViewControl(Member member)
     {
+		//System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		
-		System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
 		wImage = new Image("file:image/avatar1.png");
 		mImage = new Image("file:image/avatar2.png");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberListViewCell.fxml"));
