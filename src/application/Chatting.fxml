@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChatController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChatController">
    <children>
       <Pane layoutX="20.0" layoutY="1.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
          <opaqueInsets>
@@ -24,7 +34,7 @@
          <children>
             <Pane layoutX="568.0" layoutY="12.0" prefHeight="576.0" prefWidth="409.0" style="-fx-background-color: #FFFAFA;">
                <children>
-                  <TextArea fx:id="textarea" layoutX="14.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="383.0" promptText="Welcome to the Chatroom!">
+                  <TextArea fx:id="textarea" editable="false" layoutX="14.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="383.0" promptText="Welcome to the Chatroom!">
                      <font>
                         <Font name="Calibri Light" size="15.0" />
                      </font></TextArea>
@@ -69,7 +79,7 @@
                   </ComboBox>
                   <Pane layoutX="1.0" layoutY="516.0" prefHeight="60.0" prefWidth="398.0">
                      <children>
-                        <TextField fx:id="Inputmsg" layoutX="17.0" layoutY="22.0" prefHeight="40.0" prefWidth="392.0" promptText="Type your message here!" style="-fx-background-color: transparent; -fx-border-style: solid; -fx-border-color: lightgrey; -fx-border-radius: 50;">
+                        <TextField fx:id="Inputmsg" layoutX="17.0" layoutY="22.0" onKeyPressed="#sendMsg" prefHeight="40.0" prefWidth="392.0" promptText="Type your message here!" style="-fx-background-color: transparent; -fx-border-style: solid; -fx-border-color: lightgrey; -fx-border-radius: 50;">
                            <font>
                               <Font name="Calibri Light" size="15.0" />
                            </font>
