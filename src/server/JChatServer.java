@@ -43,7 +43,7 @@ public class JChatServer {
 
 	public static void main(String[] args) {
 		System.out.println("Start Server Service....");
-		new MemberBiZ().createMemberTable();
+		//new MemberBiZ().createMemberTable();
 		new TodoBiZ().createTodoTable();
 		JChatServer cs = new JChatServer();
 		cs.buffer = new Vector<Object>(5, 1);

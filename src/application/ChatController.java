@@ -35,7 +35,6 @@ import server.Data;
 import server.JChatData;
 import Client.JChatClient;
 import server.JChatServer;
-import server.JData;
 
 import java.net.*;
 import Client.*;

@@ -60,12 +60,12 @@ public class ProjectController implements Initializable, IClient {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		memberObservableList = FXCollections.observableArrayList();
-		memberObservableList.addAll(new Member("John Doe", Member.Female), new Member("Donte Dunigan", Member.Male),
-				new Member("Gavin Genna", Member.Female), new Member("Darin Dear", Member.Female),
-				new Member("Pura Petty", Member.Female), new Member("Herma Hines", Member.Female));
-		memberList.setItems(memberObservableList);
-		memberList.setCellFactory(memberList -> new MemberListCell());
+//		memberObservableList = FXCollections.observableArrayList();
+//		memberObservableList.addAll(new Member("John Doe", Member.Female), new Member("Donte Dunigan", Member.Male),
+//				new Member("Gavin Genna", Member.Female), new Member("Darin Dear", Member.Female),
+//				new Member("Pura Petty", Member.Female), new Member("Herma Hines", Member.Female));
+//		memberList.setItems(memberObservableList);
+//		memberList.setCellFactory(memberList -> new MemberListCell());
 
 //		treeTableColumn1.setPrefWidth(50);
 //		treeTableColumn2.setPrefWidth(50);

@@ -3,8 +3,6 @@ package vo;
 
 public class Member {
 
-    public static final int Female = 0;
-    public static final int Male = 1;
 	private int id;
     private String name;
     private int gender;
