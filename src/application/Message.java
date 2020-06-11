@@ -6,14 +6,16 @@ import java.util.Calendar;
 public class Message {
 
 	  private String text;
-	    private String user;
+	  private String user;
+	  private String time;
 	    
 	   
 		
 
-	    public Message(String text, String user) {
+	    public Message(String text, String user, String time) {
 	        this.text = text;
 	        this.user = user;
+	        this.time = time;
 	    }
 
 	    public String getText() {
@@ -31,6 +33,13 @@ public class Message {
 	    public void setUser(String user) {
 	        this.user = user;
 	    }
-
-	    
+	    public void setTime(String time) {
+	        this.time = time;
+	    }
+	    public String getTime() {
+	    	Calendar calendar = Calendar.getInstance();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+			String time =dateFormat.format(calendar.getTime());
+	        return time;
+	    }
 }
