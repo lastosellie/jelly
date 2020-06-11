@@ -2,6 +2,7 @@ package dao;
 
 public interface MemberSql {
 
+
 	// 모든 직원 다 불러오기
 	String select_all = "select * from member";
 

@@ -22,7 +22,9 @@ public class MemberDAO implements MemberSql {
 		PreparedStatement pstm = null;
 		int res = 0;
 		try {
-			pstm = conn.prepareStatement(create_member);
+			pstm = conn.prepareStatement(create_table);
+			pstm.setString(1, "MEMBER");
+			pstm.setString(2, create_table_member);
 			res = pstm.executeUpdate();
 			if (res > 0) {
 				System.out.println("MEMBER 테이블 생성 성공");

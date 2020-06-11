@@ -18,11 +18,8 @@ public class Caldao implements TaskSql {
 	private Connection conn ;
 	private static Caldao caldao;
 
-	public Caldao(Connection conn) {
-		this.conn = conn;
-	}
 	public Caldao() {
-		//아래서 만들라고 강요해서 만들었음 
+		this.conn = getConnection();
 	}
 	public static Caldao getInstance() {
 		if(caldao==null)
@@ -37,15 +34,19 @@ public class Caldao implements TaskSql {
 		 List<TaskVO> all = new ArrayList<>();
 		//connection c; 
 		//명령 수행 객체
-		Statement stmt = null;
+		 PreparedStatement ptmt = null;
 		//결과 select 실행 후 데이터를 리턴받을 객체
 		ResultSet rs= null;
+		String strDate = String.format("%d-%02d-%02d", calMap.get("nYear"), calMap.get("nMonth"), calMap.get("inputDate"));
+		
 		try {
-		stmt = conn.createStatement();//명령실행 준비 획득
-		rs = stmt.executeQuery(task_all); //select문을 살행 후 결과를 리턴
+			ptmt = conn.prepareStatement(task_all);//명령실행 준비 획득
+			ptmt.setString(1, strDate);
+			ptmt.setString(2, strDate);
+			rs = ptmt.executeQuery(); //select문을 살행 후 결과를 리턴
 			while(rs.next()) {
 				//결과를 한줄씩 읽어서 vo에 담는다 (생성자로 하나씩담음)
-				vo = new TaskVO(rs.getInt(1), rs.getInt(2), rs.getString(3),rs.getString(4), rs.getString(5));			
+				vo = new TaskVO(rs.getInt(1), rs.getString(2),rs.getString(3), rs.getString(4), rs.getInt(5));			
 				//List 객체에 추가한다.
 				all.add(vo);			
 			}
@@ -53,7 +54,7 @@ public class Caldao implements TaskSql {
 			System.out.println(e);
 		}finally {
 			Close(rs);
-			Close(stmt);
+			Close(ptmt);
 		}
 		return all;
 	}			
@@ -74,25 +75,25 @@ public class Caldao implements TaskSql {
 		// 결과로 나온 데이터들을 TaskList에 담아서
 		//return TaskList; //예시
 */		
-	public TaskVO getALLVO(int task_ID) {
-		PreparedStatement pstm= null;
-		ResultSet rs = null;
-		TaskVO vo = null;
-		try {
-			pstm= conn.prepareStatement(task_vo);
-			pstm.setInt(1, task_ID);
-			rs = pstm.executeQuery();
-			while(rs.next()) { //한개라서 if써도 됨 
-				vo = new TaskVO(rs.getInt(1), rs.getInt(2), rs.getString(3),rs.getString(4), rs.getString(5));
-			}
-		}catch(Exception e) {
-			System.out.println(e.toString());
-		}finally {
-			Close(rs);
-			Close(pstm);
-		}
-		return vo;
-	}
+//	public TaskVO getALLVO(int task_ID) {
+//		PreparedStatement pstm= null;
+//		ResultSet rs = null;
+//		TaskVO vo = null;
+//		try {
+//			pstm= conn.prepareStatement(task_vo);
+//			pstm.setInt(1, task_ID);
+//			rs = pstm.executeQuery();
+//			while(rs.next()) { //한개라서 if써도 됨 
+//				vo = new TaskVO(rs.getInt(1), rs.getInt(2), rs.getString(3),rs.getString(4), rs.getString(5));
+//			}
+//		}catch(Exception e) {
+//			System.out.println(e.toString());
+//		}finally {
+//			Close(rs);
+//			Close(pstm);
+//		}
+//		return vo;
+//	}
 	public int insertCal(TaskVO vo) {
 		int res = 0;
 		PreparedStatement pstm = null;
@@ -102,10 +103,10 @@ public class Caldao implements TaskSql {
 			//?매개인자에 값대입
 			//(순서대로! number varchar2 number) ->SQL>desc my_emp; 로 확인
 			pstm.setInt(1, vo.getTask_ID());
-			pstm.setInt(2, vo.getTeam_ID());
-			pstm.setString(3, vo.getTask_Title());
-			pstm.setString(4, vo.getTask_sDate());
-			pstm.setString(5, vo.getTask_eDate());
+			pstm.setString(2, vo.getTask_Title());
+			pstm.setString(3, vo.getTask_sDate());
+			pstm.setString(4, vo.getTask_eDate());
+			//pstm.setInt(5, vo.getTask_Du());
 			//쿼리 실행
 			res = pstm.executeUpdate();
 			if(res >0 ) {

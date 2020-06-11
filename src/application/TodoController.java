@@ -4,6 +4,7 @@ import java.awt.Event;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Client.JChatClient;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,6 +14,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import server.JData;
 
 public class TodoController {
 
@@ -38,11 +40,22 @@ public class TodoController {
 	}
 
 	public void FinishClicked(MouseEvent event) {
-		System.out.println(assigneeTfd.getText());
+		String asignee = "";
 		System.out.println(parentTfd.getText());
-		Todo todo = new Todo(projectId, titleTfd.getText(), StartDpr.getValue(), EndDpr.getValue(), ContentTaa.getText(), progressSdr.getValue());
 
-		// 팝업 닫기 => 닫고나서 클라이언트 갱신해주면 좋은데 ㅜㅜ
+		if (assigneeTfd.getText().trim().equals(""))
+			asignee = ClientInfo.UserName;
+		else
+			asignee = assigneeTfd.getText();
+
+		Todo todo = new Todo(projectId, titleTfd.getText(), asignee, StartDpr.getValue(), EndDpr.getValue(),
+				ContentTaa.getText(), progressSdr.getValue());
+
+		if (!parentTfd.getText().trim().equals("")) {
+			todo.setParentId(Integer.parseInt(parentTfd.getText()));
+		}
+		JChatClient.getInstance().sendToServer(new JData(JData.ADD_TODO, todo));
+
 		Stage stage = (Stage) ((Button) (event.getSource())).getScene().getWindow();
 		stage.close();
 	}

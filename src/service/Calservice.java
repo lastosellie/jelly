@@ -24,10 +24,10 @@ public class Calservice {
 			return calDao.getAllCal(calMap);
 		}
 
-		public TaskVO getALLVO(int task_ID) {
+/*		public TaskVO getALLVO(int task_ID) {
 			return calDao.getALLVO(task_ID);
 		}
-
+*/
 		public void insertCal(TaskVO calVo) { //dao에서 int로 했는데void로 만들어도 돼는가
 			calDao.insertCal(calVo); 
 		}

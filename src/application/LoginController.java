@@ -13,11 +13,7 @@ import javafx.stage.Stage;
 public class LoginController {
 	
 	@FXML
-	private Button btn1;
-	
-	@FXML
 	public void MouseClicked(MouseEvent event){
-		System.out.println("You clicked me!");
 		Stage stage = (Stage) ((Button)(event.getSource())).getScene().getWindow();
 	    
 	    FXMLLoader loader = new FXMLLoader();
@@ -26,6 +22,7 @@ public class LoginController {
 		try {
 			Scene scene = new Scene(loader.load());
 			stage.setScene(scene);
+			stage.centerOnScreen();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

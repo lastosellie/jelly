@@ -81,12 +81,21 @@ public class JChatClient implements Runnable {
 		}
 	}
 
+	public void sendToServer(Object data) {
+		try {
+			oos.writeObject(data);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void sendToServer(IClient sender, Object data) {
 		try {
 			subscribers.add(sender);
 			oos.writeObject(data);
-		} catch (IOException e2) {
-			System.err.println("대화중 IOException이 발생하였습니다 ");
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
+	
 }
