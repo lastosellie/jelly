@@ -144,7 +144,6 @@ public class ProjectController implements Initializable, IClient {
 		dialog.setResizable(false);
 		dialog.setTitle("New Todo");
 		dialog.show();
-
 	}
 
 	@FXML
@@ -154,7 +153,7 @@ public class ProjectController implements Initializable, IClient {
 		if (treeItem == null) {
 			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Warning Dialog");
-			alert.setHeaderText("Look, a Warning Dialog");
+			alert.setHeaderText("Warning");
 			alert.setContentText("Please, Select Todo Item");
 			alert.showAndWait();
 			return;

@@ -18,26 +18,27 @@ public class MemberDAO implements MemberSql {
 		this.conn = conn;
 	}
 
-//	public int createMemberTable() {
-//		PreparedStatement pstm = null;
-//		int res = 0;
-//		try {
-//			pstm = conn.prepareStatement(create_table);
-//			pstm.setString(1, "MEMBER");
-//			pstm.setString(2, create_table_member);
-//			res = pstm.executeUpdate();
-//			if (res > 0) {
-//				System.out.println("MEMBER 테이블 생성 성공");
-//				Commit(conn);
-//			}
-//		} catch (Exception e) {
-//			System.out.println(e);
-//			Rollback(conn);
-//		} finally {
-//			Close(pstm);
-//		}
-//		return res;
-//	}
+	public int createMemberTable() {
+		PreparedStatement pstm = null;
+		int res = 0;
+		try {
+			pstm = conn.prepareStatement(create_table);
+			pstm.setString(1, "MEMBER");
+			pstm.setString(2, create_member);
+			pstm.setString(3, "");
+			res = pstm.executeUpdate();
+			if (res > 0) {
+				System.out.println("MEMBER 테이블 생성 성공");
+				Commit(conn);
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+			Rollback(conn);
+		} finally {
+			Close(pstm);
+		}
+		return res;
+	}
 
 	public List<Member> getSelectAll() {
 		Member res = null; // 레코드 한줄 담을 객체

@@ -8,12 +8,12 @@ import vo.Member;
 
 public class MemberBiZ {
 	
-//	public int createMemberTable() {
-//		Connection conn = getConnection();
-//		int res = new MemberDAO(conn).createMemberTable();
-//		Close(conn);
-//		return res;
-//	}
+	public int createMemberTable() {
+		Connection conn = getConnection();
+		int res = new MemberDAO(conn).createMemberTable();
+		Close(conn);
+		return res;
+	}
 
 	public List<Member> getSelectAll() {
 		Connection conn = getConnection();

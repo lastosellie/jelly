@@ -15,6 +15,7 @@ public interface MemberSql {
 	// 사번으로 groupby해서 ename 셀렉
 	String select_projectid = "select member_name from member group by ? ";
 
+	String create_table = "{CALL CREATE_TABLE_IF_DOESNT_EXIT(?,?,?)}";
 	String create_member = "create table member(ID NUMBER, NAME VARCHAR2(10), GENDER NUMBER, PROJECT_ID NUMBER)";
 	// 패스워드
 	
