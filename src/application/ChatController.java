@@ -18,6 +18,8 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -28,9 +30,12 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import server.Data;
 import server.JChatData;
 import Client.JChatClient;
+import server.JChatServer;
+import server.JData;
 
 import java.net.*;
 import Client.*;
@@ -44,9 +49,10 @@ public class ChatController implements Initializable {
 	@FXML
 	private ImageView Send;
 	@FXML
-	private TextArea textarea;
-	@FXML
 	private ListView<Message> lvChatWindow;
+	
+	@FXML
+	private Button Exit;
 
 	private ChatClient client;
 	
@@ -67,11 +73,13 @@ public class ChatController implements Initializable {
 	            ListCell<Message> cell = new ListCell<Message>(){                
 	                Label lblUserLeft = new Label();
 	                Label lblTextLeft = new Label();
-	                HBox hBoxLeft = new HBox(lblUserLeft, lblTextLeft);
+	                Label lblTimeLeft = new Label();
+	                HBox hBoxLeft = new HBox(lblUserLeft, lblTextLeft, lblTimeLeft);
 
 	                Label lblUserRight = new Label();
 	                Label lblTextRight = new Label();
-	                HBox hBoxRight = new HBox(lblTextRight, lblUserRight);
+	                Label lblTimeRight = new Label();
+	                HBox hBoxRight = new HBox(lblTextRight, lblUserRight, lblTimeRight);
 
 	                {
 	                    hBoxLeft.setAlignment(Pos.CENTER_LEFT);
@@ -94,13 +102,13 @@ public class ChatController implements Initializable {
 	                        {
 	                            lblUserLeft.setText(item.getUser() + ":");
 	                            lblTextLeft.setText(item.getText());
-	                           
+	                            lblTextLeft.setText(item.getTime());
 	                            setGraphic(hBoxLeft);
 	                        }
 	                        else{
 	                            lblUserRight.setText(":" + item.getUser());
 	                            lblTextRight.setText(item.getText());
-	                            
+	                            lblTextRight.setText(item.getTime());
 	                            setGraphic(hBoxRight);
 	                        }
 	                    }
@@ -112,12 +120,11 @@ public class ChatController implements Initializable {
 	        });
 	    }      
 	
-	
 
 	@FXML
 	public void sendMsg(MouseEvent event) {
 		
-		chatMessages.add(new Message(Inputmsg.getText(), "user1"));
+		chatMessages.add(new Message(Inputmsg.getText(), "null", time));
 		Inputmsg.setText("");
 
 		/*String message = Inputmsg.getText();
@@ -127,11 +134,16 @@ public class ChatController implements Initializable {
 		textarea.appendText(client+"  "+message +"   "+time +"\n");
 		//ChatClient.getInstance().Send(, message);
 		Inputmsg.setText("");
-		Inputmsg.requestFocus();
+		Inputmsg.requestFocus();*/
 		
-		jc.getInstance().sendToServer((IClient) this, new JChatData(ClientInfo.UserName, message, JChatData.CHAT_MESSAGE, ""));*/
 		
 	}
+	
+	
+	
+
+	
+	
 		@FXML
 		public void pressedKey(KeyEvent e) {
 	
@@ -141,35 +153,26 @@ public class ChatController implements Initializable {
 			public void handle(KeyEvent event) {
 				
 				
-				String message = Inputmsg.getText();
+				/*String message = Inputmsg.getText();
 				Calendar calendar = Calendar.getInstance();
 				SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-				String time =dateFormat.format(calendar.getTime());
+				String time =dateFormat.format(calendar.getTime());*/
 
 				if (event.getCode() == KeyCode.ENTER) {
-					try{
-						textarea.appendText(client+"  "+message +"   "+time +"\n");
-						Inputmsg.setText("");
-						Inputmsg.requestFocus();
-					}catch(Exception e) {
-						System.out.println("exception");
-					}
+					chatMessages.add(new Message(Inputmsg.getText(), "null", time));
+					Inputmsg.setText("");
 				}
 			}
 
 		});
-		
 	}
-	
-		public void receive(Object data) {
+		@FXML
+		public void Disconnect(MouseEvent event) {
+		
 			
-			if (data instanceof JChatData) {
-				JChatData jd = (JChatData)data;
-				if (jd.getState() == JChatData.CHAT_MESSAGE) {
-					textarea.appendText(jd.getName() + " : " + jd.getMessage());
-					textarea.appendText("\n");
-				}
-			}
+			
 		}
+			
+		
 	
 }

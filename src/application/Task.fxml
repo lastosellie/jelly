@@ -45,7 +45,7 @@
                      <children>
                         <Label fx:id="lbl42" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children></HBox>
@@ -53,7 +53,7 @@
                      <children>
                         <Label fx:id="lbl84" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -74,7 +74,7 @@
                      <children>
                         <Label fx:id="lbl43" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -83,7 +83,7 @@
                      <children>
                         <Label fx:id="lbl85" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -101,7 +101,7 @@
                      <children>
                         <Label fx:id="lbl44" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -113,7 +113,7 @@
                      <children>
                         <Label fx:id="lbl86" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -131,7 +131,7 @@
                      <children>
                         <Label fx:id="lbl45" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -143,7 +143,7 @@
                      <children>
                         <Label fx:id="lbl87" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -161,7 +161,7 @@
                      <children>
                         <Label fx:id="lbl46" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -173,7 +173,7 @@
                      <children>
                         <Label fx:id="lbl88" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -191,7 +191,7 @@
                      <children>
                         <Label fx:id="lbl47" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -203,7 +203,7 @@
                      <children>
                         <Label fx:id="lbl89" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -216,30 +216,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox6" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl48" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
+                      <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
                   </HBox>
                   <HBox fx:id="hbox48" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl90" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
@@ -254,7 +251,7 @@
                      <children>
                         <Label fx:id="lbl49" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -266,7 +263,7 @@
                      <children>
                         <Label fx:id="lbl91" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -284,7 +281,7 @@
                      <children>
                         <Label fx:id="lbl50" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -296,7 +293,7 @@
                      <children>
                         <Label fx:id="lbl92" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -314,7 +311,7 @@
                      <children>
                         <Label fx:id="lbl51" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -326,7 +323,7 @@
                      <children>
                         <Label fx:id="lbl93" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -344,7 +341,7 @@
                      <children>
                         <Label fx:id="lbl52" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -356,7 +353,7 @@
                      <children>
                         <Label fx:id="lbl94" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -372,10 +369,10 @@
                   </Label>
                   <HBox fx:id="hbox11" prefHeight="14.0" prefWidth="143.0">
                      <children>
-                        <Label fx:id="lbl53" text=" ">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
+                        <Label fx:id="lbl53" text=" " >
+                        <font>
+                           <Font size="15.0" />
+                        </font>
                         </Label>
                      </children>
                      <VBox.margin>
@@ -384,11 +381,11 @@
                   </HBox>
                   <HBox fx:id="hbox53" prefHeight="14.0" prefWidth="143.0">
                      <children>
-                        <Label fx:id="lbl95" text=" ">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
+                        <Label fx:id="lbl95" text=" " >
+                        <font>
+                            <Font size="15.0" />
+                         </font>
+                         </Label>
                      </children>
                   </HBox>
                </children>
@@ -404,7 +401,7 @@
                      <children>
                         <Label fx:id="lbl54" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -416,7 +413,7 @@
                      <children>
                         <Label fx:id="lbl96" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -429,30 +426,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox13" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl55" text=" ">
                            <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="hbox55" prefHeight="14.0" prefWidth="143.0">
-                     <children>
-                        <Label fx:id="lbl97" text=" ">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox55" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl97" text=" ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
                   </HBox>
                </children>
             </VBox>
@@ -467,7 +461,7 @@
                      <children>
                         <Label fx:id="lbl56" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -479,7 +473,7 @@
                      <children>
                         <Label fx:id="lbl98" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -497,7 +491,7 @@
                      <children>
                         <Label fx:id="lbl57" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -509,7 +503,7 @@
                      <children>
                         <Label fx:id="lbl99" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -527,7 +521,7 @@
                      <children>
                         <Label fx:id="lbl58" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -539,7 +533,7 @@
                      <children>
                         <Label fx:id="lbl100" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -557,7 +551,7 @@
                      <children>
                         <Label fx:id="lbl59" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -569,7 +563,7 @@
                      <children>
                         <Label fx:id="lbl101" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -587,7 +581,7 @@
                      <children>
                         <Label fx:id="lbl60" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -599,7 +593,7 @@
                      <children>
                         <Label fx:id="lbl102" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -617,7 +611,7 @@
                      <children>
                         <Label fx:id="lbl61" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -629,7 +623,7 @@
                      <children>
                         <Label fx:id="lbl103" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -642,30 +636,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox20" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl62" text=" ">
                            <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="hbox62" prefHeight="14.0" prefWidth="143.0">
-                     <children>
-                        <Label fx:id="lbl104" text=" ">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox62" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl104" text=" ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
                   </HBox>
                </children>
             </VBox>
@@ -675,30 +666,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox21" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl63" text=" ">
                            <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="hbox63" prefHeight="14.0" prefWidth="143.0">
-                     <children>
-                        <Label fx:id="lbl105" text=" ">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox63" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl105" text=" ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
                   </HBox>
                </children>
             </VBox>
@@ -713,7 +701,7 @@
                      <children>
                         <Label fx:id="lbl64" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -725,7 +713,7 @@
                      <children>
                         <Label fx:id="lbl106" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -743,7 +731,7 @@
                      <children>
                         <Label fx:id="lbl65" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -755,7 +743,7 @@
                      <children>
                         <Label fx:id="lbl107" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -773,7 +761,7 @@
                      <children>
                         <Label fx:id="lbl66" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -785,7 +773,7 @@
                      <children>
                         <Label fx:id="lbl108" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -803,7 +791,7 @@
                      <children>
                         <Label fx:id="lbl67" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -815,7 +803,7 @@
                      <children>
                         <Label fx:id="lbl109" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -833,7 +821,7 @@
                      <children>
                         <Label fx:id="lbl68" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -845,7 +833,7 @@
                      <children>
                         <Label fx:id="lbl110" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -863,7 +851,7 @@
                      <children>
                         <Label fx:id="lbl69" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -875,7 +863,7 @@
                      <children>
                         <Label fx:id="lbl111" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -893,7 +881,7 @@
                      <children>
                         <Label fx:id="lbl70" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -905,7 +893,7 @@
                      <children>
                         <Label fx:id="lbl112" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -923,7 +911,7 @@
                      <children>
                         <Label fx:id="lbl71" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -935,7 +923,7 @@
                      <children>
                         <Label fx:id="lbl113" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -953,7 +941,7 @@
                      <children>
                         <Label fx:id="lbl72" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -965,7 +953,7 @@
                      <children>
                         <Label fx:id="lbl114" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -983,7 +971,7 @@
                      <children>
                         <Label fx:id="lbl73" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -995,7 +983,7 @@
                      <children>
                         <Label fx:id="lbl115" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1013,7 +1001,7 @@
                      <children>
                         <Label fx:id="lbl74" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1025,7 +1013,7 @@
                      <children>
                         <Label fx:id="lbl116" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1043,7 +1031,7 @@
                      <children>
                         <Label fx:id="lbl75" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1055,7 +1043,7 @@
                      <children>
                         <Label fx:id="lbl117" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1068,30 +1056,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox34" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl76" text=" ">
                            <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="hbox76" prefHeight="14.0" prefWidth="143.0">
-                     <children>
-                        <Label fx:id="lbl118" text=" ">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox76" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl118" text=" ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
                   </HBox>
                </children>
             </VBox>
@@ -1101,30 +1086,27 @@
                      <font>
                         <Font size="19.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="6.0" top="3.0" />
-                     </VBox.margin>
                   </Label>
                   <HBox fx:id="hbox35" prefHeight="14.0" prefWidth="143.0">
                      <children>
                         <Label fx:id="lbl77" text=" ">
                            <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="hbox77" prefHeight="14.0" prefWidth="143.0">
-                     <children>
-                        <Label fx:id="lbl119" text=" ">
-                           <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hbox77" prefHeight="14.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="lbl119" text=" ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
                   </HBox>
                </children>
             </VBox>
@@ -1139,7 +1121,7 @@
                      <children>
                         <Label fx:id="lbl78" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1151,7 +1133,7 @@
                      <children>
                         <Label fx:id="lbl120" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1169,7 +1151,7 @@
                      <children>
                         <Label fx:id="lbl79" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1181,7 +1163,7 @@
                      <children>
                         <Label fx:id="lbl121" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1199,7 +1181,7 @@
                      <children>
                         <Label fx:id="lbl80" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1211,7 +1193,7 @@
                      <children>
                         <Label fx:id="lbl122" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1229,7 +1211,7 @@
                      <children>
                         <Label fx:id="lbl81" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1241,7 +1223,7 @@
                      <children>
                         <Label fx:id="lbl123" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1259,7 +1241,7 @@
                      <children>
                         <Label fx:id="lbl82" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1271,7 +1253,7 @@
                      <children>
                         <Label fx:id="lbl124" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1289,7 +1271,7 @@
                      <children>
                         <Label fx:id="lbl83" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1301,7 +1283,7 @@
                      <children>
                         <Label fx:id="lbl125" text=" ">
                            <font>
-                              <Font size="19.0" />
+                              <Font size="15.0" />
                            </font>
                         </Label>
                      </children>
@@ -1312,20 +1294,25 @@
       </GridPane>
       <Pane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #a89dab;">
          <children>
-         	<Button fx:id="btnNMonth" layoutX="872.0" layoutY="14.0" mnemonicParsing="false" onAction="#nMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
+         	<Button fx:id="btnNMonth" layoutX="275.0" layoutY="14.0" mnemonicParsing="false" onAction="#nMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&gt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
             </Button>
-            <Button fx:id="btnToday" layoutX="422.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
+            <Button fx:id="btnToday" layoutX="115.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #a89dab; -fx-background-radius: 40;" text="2019년 11월" textFill="WHITE" wrapText="true">
                <font>
                	<Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnBMonth" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" onAction="#bMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
+            <Button fx:id="btnBMonth" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#bMonthClick" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="&lt;" textFill="WHITE">
             	<font>
                 	<Font size="18.0" />
                 </font>
+            </Button>
+            <Button layoutX="858.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#NewButtonClicked" prefHeight="52.0" prefWidth="105.0" style="-fx-background-color: #a89dab; -fx-background-radius: 50;" text="+add" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
             </Button>
          </children>
       </Pane>

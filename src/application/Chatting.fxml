@@ -80,12 +80,12 @@
                               <Font name="Calibri Light" size="15.0" />
                            </font>
                         </TextField>
-                        <ImageView fx:id="Send" fitHeight="29.0" fitWidth="28.0" layoutX="363.0" layoutY="28.0" onMouseClicked="#sendMsg" opacity="0.93" pickOnBounds="true">
+                        <ImageView fx:id="Send" fitHeight="29.0" fitWidth="28.0" layoutX="363.0" layoutY="28.0" onMouseClicked="#sendJChatDataClicked" opacity="0.93" pickOnBounds="true">
                            <image>
                               <Image url="@../../image/send.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="receive" layoutX="285.0" layoutY="28.0" mnemonicParsing="false" text="Button" />
+                        <Button fx:id="Exit" layoutX="310.0" layoutY="29.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="53.0" text="X" />
                      </children>
                   </Pane>
                   <ListView fx:id="lvChatWindow" layoutX="12.0" layoutY="42.0" prefHeight="488.0" prefWidth="392.0" />
@@ -94,11 +94,6 @@
                   <Insets top="5.0" />
                </padding>
             </Pane>
-            <TextArea fx:id="textarea" editable="false" layoutX="41.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="383.0" promptText="Welcome to the Chatroom!">
-               <font>
-                  <Font name="Calibri Light" size="15.0" />
-               </font>
-            </TextArea>
          </children>
       </Pane>
    </children>

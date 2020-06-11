@@ -11,9 +11,10 @@ public class TaskVO {
 	private int calnum;
 	
 	// Task info
-	private int Task_ID,Team_ID;
+	private int Task_ID;
 	private String Task_Title;
 	private String Task_sDate, Task_eDate;
+	private int Task_Du;
 		
 	public String getClickTitle() {
 		return clickTitle;
@@ -34,25 +35,19 @@ public class TaskVO {
 		this.calnum = calnum;
 	}
 	
-	public TaskVO(int task_ID, int team_ID, String task_Title, String task_sDate, String task_eDate) {
+	public TaskVO(int task_ID, String task_Title, String task_sDate, String task_eDate, int task_du) {
 		super();
 		Task_ID = task_ID;
-		Team_ID = team_ID;
 		Task_Title = task_Title;
 		Task_sDate = task_sDate;
 		Task_eDate = task_eDate;
+		Task_Du = task_du;
 	}
 	public int getTask_ID() {
 		return Task_ID;
 	}
 	public void setTask_ID(int task_ID) {
 		Task_ID = task_ID;
-	}
-	public int getTeam_ID() {
-		return Team_ID;
-	}
-	public void setTeam_ID(int team_ID) {
-		Team_ID = team_ID;
 	}
 	public String getTask_Title() {
 		return Task_Title;
@@ -71,6 +66,12 @@ public class TaskVO {
 	}
 	public void setTask_eDate(String task_eDate) {
 		Task_eDate = task_eDate;
+	}
+	public int getTask_Du() {
+		return Task_Du;
+	}
+	public void setTask_Du(int task_Du) {
+		Task_Du = task_Du;
 	}
 		
 	
