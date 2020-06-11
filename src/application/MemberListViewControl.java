@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import vo.Member;
 
 public class MemberListViewControl {
 
@@ -44,12 +45,13 @@ public class MemberListViewControl {
             throw new RuntimeException(e);
         }
         nameLabel.setText(member.getName());
-        if (member.getGender() == Member.GENDER.FEMALE) {
+        if (member.getGender() == Member.Female) {
         	imageView.setImage(wImage);
         } else {
         	imageView.setImage(mImage);
         }
         onlineLabel.setVisible(false);
+        offlineLabel.setVisible(false);
     }
 
     public HBox getBox()

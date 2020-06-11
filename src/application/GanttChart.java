@@ -1,54 +1,29 @@
 package application;
 
-import org.jfree.chart.ChartPanel;
-
-import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.Stroke;
-import java.awt.Toolkit;
-import java.awt.event.MouseListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
-import java.awt.geom.Rectangle2D;
-import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-
-import javax.imageio.ImageIO;
-import javax.swing.JComponent;
+import java.util.List;
 
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.LegendItem;
-import org.jfree.chart.LegendItemCollection;
-import org.jfree.chart.axis.CategoryAxis;
 import org.jfree.chart.axis.DateAxis;
-import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.plot.Plot;
-import org.jfree.chart.plot.PlotRenderingInfo;
-import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.category.CategoryItemRenderer;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.chart.title.LegendTitle;
-import org.jfree.chart.ui.RectangleInsets;
 import org.jfree.data.category.IntervalCategoryDataset;
 import org.jfree.data.gantt.Task;
 import org.jfree.data.gantt.TaskSeries;
 import org.jfree.data.gantt.TaskSeriesCollection;
-import org.jfree.data.general.DatasetGroup;
-import org.jfree.data.xy.XYDataset;
+
+import vo.Todo;
 
 public class GanttChart {
 
@@ -59,8 +34,8 @@ public class GanttChart {
 	public ChartPanel getChartPanel() {
 		return chartPanel;
 	}
-
-	public GanttChart(ArrayList<Todo> todoList) {
+	
+	public GanttChart(List<Todo> todoList) {
 		dataset = createSampleDataset(todoList);
 		chart = ChartFactory.createGanttChart("Gantt Chart Demo", // chart title
 				"Task", // domain axis label
@@ -137,7 +112,7 @@ public class GanttChart {
 	 *
 	 * @return The dataset.
 	 */
-	private IntervalCategoryDataset createSampleDataset(ArrayList<Todo> todoList) {
+	private IntervalCategoryDataset createSampleDataset(List<Todo> todoList) {
 
 		final TaskSeries ts = new TaskSeries("Scheduled");
 

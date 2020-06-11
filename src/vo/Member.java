@@ -2,16 +2,15 @@ package vo;
 
 public class Member {
 
-    private int id;
+    public static final int Female = 0;
+    public static final int Male = 1;
+	private int id;
     private String name;
-    private GENDER gender;
+    private int gender;
 
-    enum GENDER {
-        MALE,
-        FEMALE
-    }
+    
 
-	public Member(String name, GENDER gender) {
+	public Member(String name, int gender) {
 		super();
 		this.name = name;
 		this.gender = gender;
@@ -37,11 +36,11 @@ public class Member {
 		this.name = name;
 	}
 
-	public GENDER getGender() {
+	public int getGender() {
 		return gender;
 	}
 
-	public void setGender(GENDER gender) {
+	public void setGender(int gender) {
 		this.gender = gender;
 	}
 	

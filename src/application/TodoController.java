@@ -1,12 +1,7 @@
 package application;
 
-import java.awt.Event;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import Client.JChatClient;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Slider;
@@ -14,7 +9,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import server.JData;
+import server.JRequestData;
+import vo.Todo;
 
 public class TodoController {
 
@@ -54,7 +50,7 @@ public class TodoController {
 		if (!parentTfd.getText().trim().equals("")) {
 			todo.setParentId(Integer.parseInt(parentTfd.getText()));
 		}
-		JChatClient.getInstance().sendToServer(new JData(JData.ADD_TODO, todo));
+		JChatClient.getInstance().sendToServer(new JRequestData(JRequestData.ADD_TODO, todo));
 
 		Stage stage = (Stage) ((Button) (event.getSource())).getScene().getWindow();
 		stage.close();

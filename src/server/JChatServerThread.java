@@ -5,6 +5,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.*;
 
+import biz.TodoBiZ;
+import vo.Todo;
+
 public class JChatServerThread implements Runnable {
 
 	Vector<Object> buffer;
@@ -25,8 +28,8 @@ public class JChatServerThread implements Runnable {
 				Object obj = ois.readObject();
 				if (obj instanceof JChatData) {
 					acceptChatData((JChatData) obj);
-				} else if (obj instanceof JData) {
-					acceptJData((JData) obj);
+				} else if (obj instanceof JRequestData) {
+					acceptJData((JRequestData) obj);
 				}
 			} catch (Exception e) {
 				System.err.println("IOException이 발생하였습니다.");
@@ -36,20 +39,24 @@ public class JChatServerThread implements Runnable {
 		}
 	}
 
-	public void acceptJData(JData jd) throws IOException {
+	public void acceptJData(JRequestData jd) throws IOException {
 		System.out.println("Server : JData 수신");
 		
 		int command = jd.getCommand();
 		switch (command) {
-		case JData.GET_TODO: break;
-		case JData.ADD_TODO: break;
-		case JData.DEL_TODO: break;
-		case JData.GET_MEMBER: break;
-		case JData.ADD_MEMBER: break;
-		case JData.DEL_MEMBER: break;
+		case JRequestData.GET_TODO:
+			List<Todo> todoList = new TodoBiZ().getSelectAll();
+			jd.setTodoList(todoList);
+			oos.writeObject(jd);
+			break;
+		case JRequestData.ADD_TODO: 
+			new TodoBiZ().getInsertVO(jd.getTodo());
+			jd.setTodo(null);
+			jd.setResult(1);
+			oos.writeObject(jd);
+			break;
+		case JRequestData.DEL_TODO: break;
 		}
-		
-		oos.writeObject(jd);
 	}
 
 	public void acceptChatData(JChatData jd) throws IOException {

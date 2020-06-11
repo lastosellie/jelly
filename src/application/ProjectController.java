@@ -1,12 +1,13 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javax.swing.SwingUtilities;
 import Client.JChatClient;
-import java.io.IOException;
-import java.util.ArrayList;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingNode;
@@ -15,21 +16,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
+import javafx.scene.control.TreeTableView.TreeTableViewSelectionModel;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import server.JChatData;
-import server.JChatServer;
-import server.JData;
+import server.JRequestData;
+import vo.Member;
+import vo.Todo;
 
 public class ProjectController implements Initializable, IClient {
 
@@ -48,32 +54,27 @@ public class ProjectController implements Initializable, IClient {
 	@FXML
 	private TextField textField;
 
-	private ArrayList<Todo> todoList = new ArrayList<>();
+	private List<Todo> todoList = new ArrayList<Todo>();
 	private ObservableList<Member> memberObservableList;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		memberObservableList = FXCollections.observableArrayList();
-
-		// add some Students
-		memberObservableList.addAll(new Member("John Doe", Member.GENDER.MALE),
-				new Member("Donte Dunigan", Member.GENDER.MALE), new Member("Gavin Genna", Member.GENDER.MALE),
-				new Member("Darin Dear", Member.GENDER.MALE), new Member("Pura Petty", Member.GENDER.FEMALE),
-				new Member("Herma Hines", Member.GENDER.FEMALE));
+		memberObservableList.addAll(new Member("John Doe", Member.Female), new Member("Donte Dunigan", Member.Male),
+				new Member("Gavin Genna", Member.Female), new Member("Darin Dear", Member.Female),
+				new Member("Pura Petty", Member.Female), new Member("Herma Hines", Member.Female));
 		memberList.setItems(memberObservableList);
 		memberList.setCellFactory(memberList -> new MemberListCell());
 
-//		todoList.add(new Todo(1, 1, "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1", 0.6));
-//		todoList.add(new Todo(1, 2, "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2", 0.1));
-//		todoList.add(new Todo(1, 3, "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3", 0.9));
+//		treeTableColumn1.setPrefWidth(50);
+//		treeTableColumn2.setPrefWidth(50);
 
 		TreeTableColumn<Todo, String> treeTableColumn1 = new TreeTableColumn<>("Title");
 		TreeTableColumn<Todo, String> treeTableColumn2 = new TreeTableColumn<>("Assinee");
 		TreeTableColumn<Todo, String> treeTableColumn3 = new TreeTableColumn<>("Start Date");
 		TreeTableColumn<Todo, String> treeTableColumn4 = new TreeTableColumn<>("End Date");
-//		treeTableColumn1.setPrefWidth(50);
-//		treeTableColumn2.setPrefWidth(50);
+
 		treeTableColumn1.setCellValueFactory(new TreeItemPropertyValueFactory<>("title"));
 		treeTableColumn2.setCellValueFactory(new TreeItemPropertyValueFactory<>("assignee"));
 		treeTableColumn3.setCellValueFactory(new TreeItemPropertyValueFactory<>("startDate"));
@@ -83,34 +84,43 @@ public class ProjectController implements Initializable, IClient {
 		treeTableView.getColumns().add(treeTableColumn3);
 		treeTableView.getColumns().add(treeTableColumn4);
 
-		TreeItem root = new TreeItem(new Todo());
-
-		for (Todo todo : todoList) {
-			root.getChildren().add(new TreeItem(todo));
-		}
-
-		treeTableView.setRoot(root);
-//		TreeItem<Todo> root = new TreeItem<Todo>(todo0);
-//		root.setExpanded(true);
-//		root.getChildren().add(new TreeItem<Todo>(todo1));
-//		root.getChildren().add(new TreeItem<Todo>(todo2));
-//		root.getChildren().add(new TreeItem<Todo>(todo3));
-//		treeView.setRoot(root);
-//		treeView.setShowRoot(false);
-//		MultipleSelectionModel msm = treeView.getSelectionModel();
-//		msm.select(1);
 		treeTableView.setShowRoot(false);
-		root.setExpanded(true);
-		treeTableView.resizeColumn(treeTableColumn1, 60);
+		// treeTableView.getRoot().setExpanded(true);
+		// treeTableView.resizeColumn(treeTableColumn1, 60);
+		
+		try {
+			JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
+		} catch (Exception e) {
+			System.out.println("서버와의 접속오류로 종료합니다.");
+			System.exit(0);
+		}	
+	}
 
-		final SwingNode swingNode = new SwingNode();
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
+	void refreshTodoList() {
+		Platform.runLater(new Runnable() {
 			public void run() {
-				swingNode.setContent(new GanttChart(todoList).getChartPanel());
+				TreeItem root = new TreeItem(new Todo());
+				for (Todo todo : todoList) {
+					root.getChildren().add(new TreeItem(todo));
+				}
+				treeTableView.setRoot(root);
+				root.setExpanded(true);
+
+				if (todoList.size() > 0) {
+					MultipleSelectionModel msm = treeTableView.getSelectionModel();
+					msm.select(0);
+				}
+
+				final SwingNode swingNode = new SwingNode();
+				SwingUtilities.invokeLater(new Runnable() {
+					@Override
+					public void run() {
+						swingNode.setContent(new GanttChart(todoList).getChartPanel());
+					}
+				});
+				gridPane.add(swingNode, 1, 1);
 			}
 		});
-		gridPane.add(swingNode, 1, 1);
 	}
 
 	@FXML
@@ -134,6 +144,24 @@ public class ProjectController implements Initializable, IClient {
 		dialog.setResizable(false);
 		dialog.setTitle("New Todo");
 		dialog.show();
+
+	}
+
+	@FXML
+	public void deleteButtonClicked(MouseEvent event) {
+		TreeItem<Todo> treeItem = treeTableView.getSelectionModel().getSelectedItem();
+		
+		if (treeItem == null) {
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setTitle("Warning Dialog");
+			alert.setHeaderText("Look, a Warning Dialog");
+			alert.setContentText("Please, Select Todo Item");
+			alert.showAndWait();
+			return;
+		}
+		
+		Todo todo = treeItem.getValue();
+		System.out.println(todo.getId());
 	}
 
 	@FXML
@@ -146,7 +174,7 @@ public class ProjectController implements Initializable, IClient {
 
 	@FXML
 	public void sendJellyClicked(MouseEvent event) {
-		JChatClient.getInstance().sendToServer(this, new JData(JData.ADD_TODO));
+		JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
 	}
 
 	@Override
@@ -157,16 +185,15 @@ public class ProjectController implements Initializable, IClient {
 				textArea.appendText(jd.getName() + " : " + jd.getMessage());
 				textArea.appendText("\n");
 			}
-		} else if (data instanceof JData) {
-			switch (((JData) data).getCommand()) {
-			case JData.ADD_TODO:
-				if (((JData) data).getResult() == 1) {
-					//JChatClient.getInstance().sendToServer(this, new JData(JData.GET_TODO));
-				}
+		} else if (data instanceof JRequestData) {
+			JRequestData jd = (JRequestData) data;
+			switch (jd.getCommand()) {
+			case JRequestData.ADD_TODO:
+				JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
 				break;
-			case JData.GET_TODO:
-				if (((JData) data).getResult() == 1) {
-				}
+			case JRequestData.GET_TODO:
+				todoList = jd.getTodoList();
+				refreshTodoList();
 				break;
 			}
 		}

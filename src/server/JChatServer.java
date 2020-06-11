@@ -4,6 +4,7 @@ import java.net.*;
 import java.util.*;
 
 import biz.MemberBiZ;
+import biz.TodoBiZ;
 
 import java.io.*;
 
@@ -42,9 +43,8 @@ public class JChatServer {
 
 	public static void main(String[] args) {
 		System.out.println("Start Server Service....");
-		
 		new MemberBiZ().createMemberTable();
-		
+		new TodoBiZ().createTodoTable();
 		JChatServer cs = new JChatServer();
 		cs.buffer = new Vector<Object>(5, 1);
 		cs.service();

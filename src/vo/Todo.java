@@ -1,8 +1,11 @@
-package application;
+package vo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Todo {
+import application.ClientInfo;
+
+public class Todo implements Serializable {
 
 	private int projectId;
 	private String assignee; // ´ã´çÀÚ
@@ -27,7 +30,6 @@ public class Todo {
 		this.endDate = endDate;
 		this.content = content;
 		this.progress = progress;
-		this.assignee = ClientInfo.UserName;
 	}
 	
 	public Todo(int projectId, String title, String assignee, LocalDate startDate, LocalDate endDate, String content,

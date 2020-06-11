@@ -1,6 +1,7 @@
 package application;
 
 import javafx.scene.control.ListCell;
+import vo.Member;
 
 public class MemberListCell extends ListCell<Member> {
 
