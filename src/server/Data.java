@@ -5,7 +5,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Vector;
 
-import Client.Receive;
 
 public class Data implements Serializable {
 	private String name; 

@@ -29,8 +29,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import server.JChatData;
 import server.JChatServer;
+import server.JData;
 
 public class ProjectController implements Initializable, IClient {
+
+	private int projectId = 1;
 
 	@FXML
 	private GridPane gridPane;
@@ -61,9 +64,9 @@ public class ProjectController implements Initializable, IClient {
 		memberList.setItems(memberObservableList);
 		memberList.setCellFactory(memberList -> new MemberListCell());
 
-		todoList.add(new Todo("홍길동", "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1"));
-		todoList.add(new Todo("정길동", "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2"));
-		todoList.add(new Todo("이길동", "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3"));
+//		todoList.add(new Todo(1, 1, "설계1", LocalDate.now(), LocalDate.now().plusDays(30), "구현하기 전, 설계 검토 step1", 0.6));
+//		todoList.add(new Todo(1, 2, "설계2", LocalDate.now(), LocalDate.now().plusDays(5), "구현하기 전, 설계 검토 step2", 0.1));
+//		todoList.add(new Todo(1, 3, "설계3", LocalDate.now(), LocalDate.now().plusDays(10), "구현하기 전, 설계 검토 step3", 0.9));
 
 		TreeTableColumn<Todo, String> treeTableColumn1 = new TreeTableColumn<>("Title");
 		TreeTableColumn<Todo, String> treeTableColumn2 = new TreeTableColumn<>("Assinee");
@@ -80,7 +83,7 @@ public class ProjectController implements Initializable, IClient {
 		treeTableView.getColumns().add(treeTableColumn3);
 		treeTableView.getColumns().add(treeTableColumn4);
 
-		TreeItem root = new TreeItem(new Todo("전체업무"));
+		TreeItem root = new TreeItem(new Todo());
 
 		for (Todo todo : todoList) {
 			root.getChildren().add(new TreeItem(todo));
@@ -111,18 +114,19 @@ public class ProjectController implements Initializable, IClient {
 	}
 
 	@FXML
-	public void TreeTableViewSelected(MouseEvent event) {
+	public void treeTableViewSelected(MouseEvent event) {
 		System.out.println("selected");
 	}
 
 	@FXML
-	public void NewButtonClicked(MouseEvent event) {
+	public void newButtonClicked(MouseEvent event) {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.DECORATED);
 		Parent parent;
 		try {
-			parent = FXMLLoader.load(getClass().getResource("TodoDialog.fxml"));
-			Scene scene = new Scene(parent);
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TodoDialog.fxml"));
+			fxmlLoader.setController(new TodoController(projectId));
+			Scene scene = new Scene(fxmlLoader.load());
 			dialog.setScene(scene);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -132,23 +136,38 @@ public class ProjectController implements Initializable, IClient {
 		dialog.show();
 	}
 
-	JChatClient jc = JChatClient.getInstance();
-
 	@FXML
-	public void sendBtnClicked(MouseEvent event) {
+	public void sendJChatDataClicked(MouseEvent event) {
 		String message = textField.getText();
 		textField.setText("");
-		jc.sendToServer(this, new JChatData(ClientInfo.UserName, message, JChatData.CHAT_MESSAGE, ""));
+		JChatClient.getInstance().sendToServer(this,
+				new JChatData(ClientInfo.UserName, message, JChatData.CHAT_MESSAGE, ""));
+	}
 
+	@FXML
+	public void sendJellyClicked(MouseEvent event) {
+		JChatClient.getInstance().sendToServer(this, new JData(JData.ADD_TODO));
 	}
 
 	@Override
 	public void receive(Object data) {
 		if (data instanceof JChatData) {
-			JChatData jd = (JChatData)data;
+			JChatData jd = (JChatData) data;
 			if (jd.getState() == JChatData.CHAT_MESSAGE) {
 				textArea.appendText(jd.getName() + " : " + jd.getMessage());
 				textArea.appendText("\n");
+			}
+		} else if (data instanceof JData) {
+			switch (((JData) data).getCommand()) {
+			case JData.ADD_TODO:
+				if (((JData) data).getResult() == 1) {
+					//JChatClient.getInstance().sendToServer(this, new JData(JData.GET_TODO));
+				}
+				break;
+			case JData.GET_TODO:
+				if (((JData) data).getResult() == 1) {
+				}
+				break;
 			}
 		}
 	}
