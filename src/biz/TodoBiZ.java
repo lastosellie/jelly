@@ -18,9 +18,9 @@ public class TodoBiZ {
 		return res;
 	}
 
-	public List<Todo> getSelectAll() {
+	public List<Todo> getSelectProjectId(int projectId) {
 		Connection conn = getConnection();
-		List<Todo> all = new TodoDAO(conn).getSelectAll();
+		List<Todo> all = new TodoDAO(conn).getSelectProjectId(projectId);
 		Close(conn);
 		return all;
 	}

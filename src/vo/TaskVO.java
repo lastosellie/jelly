@@ -73,6 +73,10 @@ public class TaskVO {
 	public void setTask_Du(int task_Du) {
 		Task_Du = task_Du;
 	}
-		
 	
+	@Override
+	public String toString() {
+		return Task_Title + "\t"+ Task_sDate.split(" ")[0] + "\t" + Task_eDate.split(" ")[0];
+	}
+
 }
