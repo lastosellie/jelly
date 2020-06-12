@@ -55,8 +55,6 @@ public class ChatController implements Initializable, IClient{
 	
 	@FXML
 	private Button Exit;
-
-	private ChatClient client;
 	
 	Calendar calendar = Calendar.getInstance();
 	SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
