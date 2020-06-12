@@ -38,7 +38,7 @@
                     <menus>
                       <Menu mnemonicParsing="false" text="File">
                         <items>
-                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save" onAction="#SaveMsg"/>
                           <MenuItem mnemonicParsing="false" text="Close" />
                         </items>
                       </Menu>
@@ -80,12 +80,12 @@
                               <Font name="Calibri Light" size="15.0" />
                            </font>
                         </TextField>
-                        <ImageView fx:id="Send" fitHeight="29.0" fitWidth="28.0" layoutX="363.0" layoutY="28.0" onMouseClicked="#sendJChatDataClicked" opacity="0.93" pickOnBounds="true">
+                        <ImageView fx:id="Send" fitHeight="29.0" fitWidth="28.0" layoutX="363.0" layoutY="28.0" onMouseClicked="#pressedKey" opacity="0.93" pickOnBounds="true">
                            <image>
                               <Image url="@../../image/send.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="Exit" layoutX="310.0" layoutY="29.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="53.0" text="X" />
+                        <Button fx:id="Exit" layoutX="310.0" layoutY="29.0" mnemonicParsing="false" onKeyPressed="#Disconnect" prefHeight="19.0" prefWidth="53.0" text="X" />
                      </children>
                   </Pane>
                   <ListView fx:id="lvChatWindow" layoutX="12.0" layoutY="42.0" prefHeight="488.0" prefWidth="392.0" />

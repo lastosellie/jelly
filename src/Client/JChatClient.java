@@ -86,6 +86,8 @@ public class JChatClient implements Runnable {
 			oos.writeObject(data);
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
@@ -95,7 +97,8 @@ public class JChatClient implements Runnable {
 			oos.writeObject(data);
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
 }
