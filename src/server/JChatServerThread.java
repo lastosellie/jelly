@@ -55,7 +55,11 @@ public class JChatServerThread implements Runnable {
 			jd.setResult(1);
 			oos.writeObject(jd);
 			break;
-		case JRequestData.DEL_TODO: break;
+		case JRequestData.DEL_TODO:
+			new TodoBiZ().getDeleteVO(jd.getTodoId());
+			jd.setResult(1);
+			oos.writeObject(jd);
+			break;
 		}
 	}
 

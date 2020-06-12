@@ -369,7 +369,7 @@
                   </Label>
                   <HBox fx:id="hbox11" prefHeight="14.0" prefWidth="143.0">
                      <children>
-                        <Label fx:id="lbl53" text=" " >
+                        <Label fx:id="lbl53" text=" ">
                         <font>
                            <Font size="15.0" />
                         </font>
@@ -381,7 +381,7 @@
                   </HBox>
                   <HBox fx:id="hbox53" prefHeight="14.0" prefWidth="143.0">
                      <children>
-                        <Label fx:id="lbl95" text=" " >
+                        <Label fx:id="lbl95" text=" ">
                         <font>
                             <Font size="15.0" />
                          </font>

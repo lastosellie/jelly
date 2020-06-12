@@ -2,7 +2,8 @@ package dao;
 
 public interface TodoSql {
 
-	String select_all = "SELECT * FROM TODO WHERE PROJECT_ID=? ORDER BY TODO_ID";
+	String select_project_id = "SELECT * FROM TODO WHERE PROJECT_ID=? ORDER BY TODO_ID";
+	String select_all = "SELECT * FROM TODO ORDER BY TODO_ID";
 	String todo_delete_id = "DELETE FROM TODO WHERE TODO_ID=?";
 	String todo_delete_projectid = "DELETE FROM TODO WHERE PROJECT_ID=?";
 	String todo_insert = "INSERT INTO TODO VALUES(?,?,TODO_SEQ.NEXTVAL,?,?,?,?,?,?)";

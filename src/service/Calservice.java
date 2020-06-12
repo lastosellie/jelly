@@ -28,12 +28,16 @@ public class Calservice {
 			return calDao.getALLVO(task_ID);
 		}
 */
+		public int getNewPJID() {
+			return calDao.getNewPJID();
+		}
+		
 		public void insertCal(TaskVO calVo) { //dao에서 int로 했는데void로 만들어도 돼는가
 			calDao.insertCal(calVo); 
 		}
 		
-		public void deleteCal(TaskVO vo) {
-			calDao.deleteCal(vo);
+		public void deleteCal(int ID) {
+			calDao.deleteCal(ID);
 		}
 
 /*		public void updateDetail(TaskVO calVo) {

@@ -6,9 +6,7 @@ import static common.JDBCTemplate.getConnection;
 import java.sql.Connection;
 import java.util.List;
 
-import dao.MemberDAO;
 import dao.TodoDAO;
-import vo.Member;
 import vo.Todo;
 
 public class TodoBiZ {
@@ -31,6 +29,20 @@ public class TodoBiZ {
 		Connection conn = getConnection();
 		int res = new TodoDAO(conn).getInsertVO(todo);
 		Close(conn);
+		return res;
+	}
+	
+	public int getDeleteVO(int todoId) {
+		Connection con = getConnection();
+		int res = new TodoDAO(con).getDeleteVO(todoId);
+		Close(con);
+		return res;
+	}
+	
+	public int getDeleteAll(int projectId) {
+		Connection con = getConnection();
+		int res = new TodoDAO(con).getDeleteAll(projectId);
+		Close(con);
 		return res;
 	}
 

@@ -101,4 +101,44 @@ public class TodoDAO implements TodoSql {
 		}
 		return res;
 	}
+	
+	public int getDeleteAll(int projectId) {
+		int res = 0;
+		PreparedStatement pstm = null;
+		try {
+			pstm = conn.prepareStatement(todo_delete_projectid);
+			pstm.setInt(1, projectId);
+			res = pstm.executeUpdate();
+			if (res > 0) {
+				System.out.println("昏力 己傍");
+				Commit(conn);
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+			Rollback(conn);
+		} finally {
+			Close(pstm);
+		}
+		return res;
+	}
+	
+	public int getDeleteVO(int todoId) {
+		int res = 0;
+		PreparedStatement pstm = null;
+		try {
+			pstm = conn.prepareStatement(todo_delete_id);
+			pstm.setInt(1, todoId);
+			res = pstm.executeUpdate();
+			if (res > 0) {
+				System.out.println("昏力 己傍");
+				Commit(conn);
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+			Rollback(conn);
+		} finally {
+			Close(pstm);
+		}
+		return res;
+	}
 }

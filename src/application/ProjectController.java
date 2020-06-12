@@ -5,16 +5,16 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
 import javax.swing.SwingUtilities;
+
 import Client.JChatClient;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -26,7 +26,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
-import javafx.scene.control.TreeTableView.TreeTableViewSelectionModel;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -87,13 +86,8 @@ public class ProjectController implements Initializable, IClient {
 		treeTableView.setShowRoot(false);
 		// treeTableView.getRoot().setExpanded(true);
 		// treeTableView.resizeColumn(treeTableColumn1, 60);
-		
-		try {
-			JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
-		} catch (Exception e) {
-			System.out.println("서버와의 접속오류로 종료합니다.");
-			System.exit(0);
-		}	
+
+		JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
 	}
 
 	void refreshTodoList() {
@@ -125,14 +119,12 @@ public class ProjectController implements Initializable, IClient {
 
 	@FXML
 	public void treeTableViewSelected(MouseEvent event) {
-		System.out.println("selected");
 	}
 
 	@FXML
 	public void newButtonClicked(MouseEvent event) {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.DECORATED);
-		Parent parent;
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TodoDialog.fxml"));
 			fxmlLoader.setController(new TodoController(projectId));
@@ -149,7 +141,7 @@ public class ProjectController implements Initializable, IClient {
 	@FXML
 	public void deleteButtonClicked(MouseEvent event) {
 		TreeItem<Todo> treeItem = treeTableView.getSelectionModel().getSelectedItem();
-		
+
 		if (treeItem == null) {
 			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Warning Dialog");
@@ -158,9 +150,11 @@ public class ProjectController implements Initializable, IClient {
 			alert.showAndWait();
 			return;
 		}
-		
+
 		Todo todo = treeItem.getValue();
-		System.out.println(todo.getId());
+		JRequestData jd = new JRequestData(JRequestData.DEL_TODO);
+		jd.setTodoId(todo.getId());
+		JChatClient.getInstance().sendToServer(this, jd);
 	}
 
 	@FXML
@@ -188,6 +182,8 @@ public class ProjectController implements Initializable, IClient {
 			JRequestData jd = (JRequestData) data;
 			switch (jd.getCommand()) {
 			case JRequestData.ADD_TODO:
+			case JRequestData.DEL_TODO:
+			case JRequestData.DEL_TODO_All:
 				JChatClient.getInstance().sendToServer(this, new JRequestData(JRequestData.GET_TODO));
 				break;
 			case JRequestData.GET_TODO:
