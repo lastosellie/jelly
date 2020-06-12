@@ -88,6 +88,8 @@ public class ProjectController implements Initializable, IClient {
 		treeTableView.getColumns().add(treeTableColumn3);
 		treeTableView.getColumns().add(treeTableColumn4);
 
+		TreeItem root = new TreeItem(new Todo());
+		treeTableView.setRoot(root);
 		treeTableView.setShowRoot(false);
 		// treeTableView.getRoot().setExpanded(true);
 		// treeTableView.resizeColumn(treeTableColumn1, 60);
@@ -100,17 +102,18 @@ public class ProjectController implements Initializable, IClient {
 	void refreshTodoList() {
 		Platform.runLater(new Runnable() {
 			public void run() {
-				TreeItem root = new TreeItem(new Todo());
+				treeTableView.getRoot().getChildren().clear();
+				
 				for (Todo todo : todoList) {
-					root.getChildren().add(new TreeItem(todo));
+					treeTableView.getRoot().getChildren().add(new TreeItem(todo));
 				}
-				treeTableView.setRoot(root);
-				root.setExpanded(true);
+				
+				
 
-				if (todoList.size() > 0) {
-					MultipleSelectionModel msm = treeTableView.getSelectionModel();
-					msm.select(0);
-				}
+//				if (todoList.size() > 0) {
+//					MultipleSelectionModel msm = treeTableView.getSelectionModel();
+//					msm.select(0);
+//				}
 
 				final SwingNode swingNode = new SwingNode();
 				SwingUtilities.invokeLater(new Runnable() {
