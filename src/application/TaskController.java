@@ -8,6 +8,7 @@ import vo.TaskVO;
 
 import javafx.geometry.Insets;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,6 +34,9 @@ public class TaskController implements Initializable {
 	private VBox[] vboxList;
 	private String[] colorList;
 	int colorIdx;
+	int[][] CalTaskID = new int[42][2];
+	
+	//private Button[] btnList;
 	
 	// Click Data
 	static String clickDate;
@@ -108,8 +112,10 @@ public class TaskController implements Initializable {
 	
 	@FXML
 	private Button btnNMonth;
-		
-
+	/*
+	@FXML
+	private Button btn1, btn2;
+	*/
 	/*===============================================================
 	 * Method		: initialize
 	 * Description	: 최초 FXML 로드 시 수행되며
@@ -161,18 +167,26 @@ public class TaskController implements Initializable {
 				lbl105,	lbl106,	lbl107,	lbl108,	lbl109,	lbl110,	lbl111,	
 				lbl112,	lbl113,	lbl114,	lbl115,	lbl116,	lbl117,	lbl118,	
 				lbl119,	lbl120,	lbl121,	lbl122,	lbl123,	lbl124,	lbl125
-		};
-		
+		};		
 		// 막대 색상 
 		colorIdx = 0;
 		colorList = new String[] {
 				"yellow", "cyan", "gray", "pink","green","magenta","lightGray","blue"
 		};
+		/*	
+		btnList = new Button[] {
+				btn1, btn2
+		};
 		
-//   	if(Main.curEmp.getDept_id()!=20) {
-//    		btnAdd.setDisable(true);
-//    	}
-			
+		for(int i=0; i<btnList.length; i++) {
+			int testi = i+15;
+			btnList[i].setOnAction(e -> {
+				if(CalTaskID[testi][0] > 0) {
+					service.deleteCal(CalTaskID[testi][0]);
+				}
+	        });
+		}
+		*/
 		// 현재 조회중인 연/월을 오늘 날짜로 초기화
 		today();
 		
@@ -185,6 +199,7 @@ public class TaskController implements Initializable {
 	 * Description	: 호출 시 입력인자로 전달받은 연/월 정보로 달력 내용 업데이트
 	 *===============================================================*/
 	public void changeCalendar(int nYear, int nMonth){
+		colorIdx = 0;
 		// 이전 Cell에 입력했던 데이터 기록 : 배열 초기화
 		int[] prevTaskID = new int[] {-1, -1};
 		boolean[] isRemoved = new boolean[] {true, true};
@@ -212,6 +227,11 @@ public class TaskController implements Initializable {
 			hboxList1[i].setStyle("-fx-border-color: white;");			
 			hboxList2[i].setBackground(new Background(new BackgroundFill(Color.WHITE,CornerRadii.EMPTY, Insets.EMPTY)));
 			hboxList2[i].setStyle("-fx-border-color: white;");			
+		}
+		for(int i=0; i<CalTaskID.length; i++) {
+			for(int j=0; j<2; j++) {
+				CalTaskID[i][j] = -1;
+			}
 		}
 				
 		// Today Button의 Text를  조회하고자 하는 연/월로 변경 
@@ -289,12 +309,14 @@ public class TaskController implements Initializable {
 							String sDate = String.format("%d-%02d-%02d", nYear, nMonth + 1, inputDate);
 							TaskVO curTask = null;
 							
+							// 첫 줄
 							if(isEmpty[0] == true) {
 								prevTaskID[0] = -1;
 								
 								curTask = popTodayStartTask(sDate);
-								if(curTask != null) {	
+								if(curTask != null) {
 									labelList1[i].setText(curTask.getTask_Title());
+									curID = curTask.getTask_ID();
 									
 			    					int count = curTask.getTask_Du();
 			    					for(int j = 0; j < count; j++) {
@@ -302,20 +324,23 @@ public class TaskController implements Initializable {
 			    							break;
 			    						
 			    						hboxList1[i + j].setStyle("-fx-background-color:"+ colorList[colorIdx] + ";");
+			    						CalTaskID[i+j][0] = curID;
 			    					}
 			    					colorIdx = colorIdx + 1 < colorList.length ? colorIdx + 1 : 0;								
 
-									prevTaskID[0] = curTask.getTask_ID();
+									prevTaskID[0] = curID;
 									isEmpty[0] = false;
 								}
 							}
 							
+							// 둘째 줄
 							if(isEmpty[1] == true) {
 								prevTaskID[1] = -1;
 								
 								curTask = popTodayStartTask(sDate);
 								if(curTask != null) {	
 									labelList2[i].setText(curTask.getTask_Title());
+									curID = curTask.getTask_ID();
 									
 			    					int count = curTask.getTask_Du();
 			    					for(int j = 0; j < count; j++) {
@@ -323,10 +348,11 @@ public class TaskController implements Initializable {
 			    							break;
 			    						
 			    						hboxList2[i + j].setStyle("-fx-background-color:"+ colorList[colorIdx] + ";");
+			    						CalTaskID[i+j][1] = curID;
 			    					}
 			    					colorIdx = colorIdx + 1 < colorList.length ? colorIdx + 1 : 0;								
 
-									prevTaskID[1] = curTask.getTask_ID();
+									prevTaskID[1] = curID;
 									isEmpty[1] = false;
 								}
 							}
@@ -457,7 +483,9 @@ public class TaskController implements Initializable {
 		}
 		dialog.setResizable(false);
 		dialog.setTitle("New Todo");
-		dialog.show();
+		dialog.showAndWait();
+		
+		changeCalendar(nYear, nMonth);
 	}
 	
 	//	    @FXML

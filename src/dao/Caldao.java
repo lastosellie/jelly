@@ -94,6 +94,25 @@ public class Caldao implements TaskSql {
 //		}
 //		return vo;
 //	}
+	
+	public int getNewPJID() {
+		int newID = 1;
+		Statement stmt = null;
+		PreparedStatement pstm = null;
+		try {
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(task_getLastID);
+			
+			if(rs.next()) {
+				newID = rs.getInt(1) + 1;
+			}
+		}catch(Exception e) {
+		}finally {
+			Close(pstm);
+		}
+		return newID;
+	}
+	
 	public int insertCal(TaskVO vo) {
 		int res = 0;
 		PreparedStatement pstm = null;
@@ -106,7 +125,6 @@ public class Caldao implements TaskSql {
 			pstm.setString(2, vo.getTask_Title());
 			pstm.setString(3, vo.getTask_sDate());
 			pstm.setString(4, vo.getTask_eDate());
-			//pstm.setInt(5, vo.getTask_Du());
 			//쿼리 실행
 			res = pstm.executeUpdate();
 			if(res >0 ) {
@@ -121,13 +139,13 @@ public class Caldao implements TaskSql {
 		}
 		return res;
 	}
-	public int deleteCal(TaskVO vo) {
+	public int deleteCal(int ID) {
 		int res = 0; //삭제 결과 저장할 변수
 		PreparedStatement pstm = null;//sql문장에 매개변수 ? 를 사용하기 때문
 		try {
 			pstm = conn.prepareStatement(task_delete);
 			//?의 매개변수에 값을 전달
-			pstm.setInt(1, vo.getTask_ID());
+			pstm.setInt(1, ID);
 			//삭제 실행 후 결과 리턴
 			res = pstm.executeUpdate();//insert, delete, uppdate query
 			if( res > 0) {

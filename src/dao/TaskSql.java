@@ -2,8 +2,10 @@ package dao;
 
 public interface TaskSql {
 
+		
 		/////SELECT //////
 		String task_all= "SELECT * FROM TB_TASK WHERE TSDATE <= ? AND TEDATE >= ? ORDER BY TSDATE" ;
+		String task_getLastID = "SELECT MAX(PROJECT_ID) FROM TB_TASK";
 		//?에 매개변수를 사용하겠다.
 		//String task_vo="SELECT * FROM TB_TASK WHERE TSDATE <= '?' AND TEDATE >= '?'";
 //		String task_vo02="SELECT * FROM TB_TASK WHERE TID =? AND =?"; 
