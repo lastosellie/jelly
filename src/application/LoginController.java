@@ -17,7 +17,7 @@ public class LoginController {
 		Stage stage = (Stage) ((Button)(event.getSource())).getScene().getWindow();
 	    
 	    FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("Project.fxml"));
+        loader.setLocation(Main.class.getResource("Task.fxml"));
         
 		try {
 			Scene scene = new Scene(loader.load());
