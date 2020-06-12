@@ -16,13 +16,17 @@ public interface MemberSql {
 	String select_projectid = "select member_name from member group by ? ";
 
 	String create_table = "{CALL CREATE_TABLE_IF_DOESNT_EXIT(?,?,?)}";
-	String create_member = "create table member(ID NUMBER, NAME VARCHAR2(10), GENDER NUMBER, PROJECT_ID NUMBER)";
+	String create_member = "create table member(MEMBR_NAME VARCHAR2(10), GENDER NUMBER(1), EMPNO VARCHAR2(20), PASSWORD VARCHAR2(20), PROJECT_ID NUMBER(8), DEPTNO NUMBER(8)";
 	// 패스워드
 	
-	// empno, ename, gender,project_id
-	String insert_member = "insert into member values(?,?,?,?); end;";
+	// name, gender, id, pw, teamid, deptno
+	String insert_member = "insert into member values(?,?,?,?,?,?)";
 	// empno 로 찾아서 지우기?
 	String delete_member = "delete from member where empno =?";
+	
+	
+	
+	
 	
 //	BEGIN
 //	   EXECUTE IMMEDIATE 'SELECT COUNT(*) FROM TTTT';

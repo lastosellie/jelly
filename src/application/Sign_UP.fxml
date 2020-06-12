@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
@@ -14,9 +15,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
    <center>
-      <GridPane fx:id="grid" BorderPane.alignment="CENTER">
+      <GridPane fx:id="grid" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="20.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="23.0" prefWidth="100.0" />
@@ -38,37 +39,44 @@
             <Label text="PW" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="NAME" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="TeamID" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="TName" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onMouseClicked="#addClick" prefHeight="38.0" prefWidth="57.0" text="Go!" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <TextField fx:id="teamid" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="name" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <Button fx:id="submit" mnemonicParsing="false" onMouseClicked="#SubmitSignup" prefHeight="38.0" prefWidth="57.0" text="Go!" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets bottom="30.0" left="140.0" />
                </GridPane.margin>
             </Button>
-            <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="id" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <ImageView fitHeight="117.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
-                  <Image url="@../../../../../../jelly/icon1.png" />
+                  <Image url="@../../image/icon1.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="96.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
-                  <Image url="@../../../../../../jelly/가입하기.PNG" />
+                  <Image url="@../../image/가입하기.png" />
                </image>
                <GridPane.margin>
                   <Insets top="50.0" />
                </GridPane.margin>
             </ImageView>
             <Label text="DEPTNO" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="TName1" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="deptno" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <Label text="Gender" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="FEMALE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="MALE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <PasswordField fx:id="pw" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="MALE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pickGender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="female" alignment="TOP_RIGHT" mnemonicParsing="false" prefHeight="0.0" prefWidth="86.0" text="FEMALE" textAlignment="RIGHT" toggleGroup="$pickGender" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets left="90.0" />
+                  <Insets left="100.0" />
                </GridPane.margin>
-            </Button>
+            </RadioButton>
          </children>
       </GridPane>
    </center>

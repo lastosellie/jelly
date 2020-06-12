@@ -3,10 +3,12 @@ import java.sql.*;
 import static common.JDBCTemplate.*;
 import java.util.List;
 
+import Client.JChatClient;
 import dao.MemberDAO;
 import vo.Member;
 
 public class MemberBiZ {
+	
 	
 	public int createMemberTable() {
 		Connection conn = getConnection();
@@ -56,6 +58,12 @@ public class MemberBiZ {
 		int res = new MemberDAO(conn).DeleteAll(vo);
 		Close(conn);
 		return res;
+	}
+
+	private static MemberBiZ instance = new MemberBiZ();
+	public static MemberBiZ getInstance() {
+		
+		return instance;
 	}
 
 //	public int getUpdateVO(MyEmpVO vo) {

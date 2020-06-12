@@ -2,6 +2,8 @@ package dao;
 
 import java.util.*;
 
+import Client.JChatClient;
+import biz.MemberBiZ;
 import oracle.jdbc.OracleCallableStatement;
 import oracle.jdbc.OracleTypes;
 
@@ -11,6 +13,8 @@ import static common.JDBCTemplate.*;
 // CRUD를 실행하는 db sql 코드
 
 public class MemberDAO implements MemberSql {
+	
+	
 
 	private Connection conn;
 
@@ -52,8 +56,8 @@ public class MemberDAO implements MemberSql {
 			;
 			rs = stmt.executeQuery(select_all);
 			while (rs.next()) {
-				res = new Member(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5));
-				res.setId(rs.getInt("ID"));
+				res = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
+				res.setId(rs.getString("ID"));
 				res.setName(rs.getString("NAME"));
 				all.add(res);
 			}
@@ -78,7 +82,7 @@ public class MemberDAO implements MemberSql {
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				vo = new Member(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5));
+				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
 
 			}
 		} catch (SQLException e) {
@@ -101,7 +105,7 @@ public class MemberDAO implements MemberSql {
 			stmt.setString(1, name);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				vo = new Member(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5));
+				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
 
 			}
 		} catch (SQLException e) {
@@ -124,7 +128,7 @@ public class MemberDAO implements MemberSql {
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				vo = new Member(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5));
+				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -136,19 +140,29 @@ public class MemberDAO implements MemberSql {
 		return vo;
 	}
 
+	
+	//회원가입 name, gender, id(사번), pw, teamid, deptno
 	public int InsertAll(Member vo) throws Exception {
 		int res = 0;
-		CallableStatement pstm = null;
+		PreparedStatement pstm = null;
 		try {
-			pstm = conn.prepareCall(insert_member); // 쿼리 호출
+			pstm = conn.prepareStatement(insert_member); // 쿼리 호출
 
-			pstm.setInt(1, vo.getId());
-			pstm.setString(2, vo.getName());
-			pstm.setInt(3, vo.getGender());
-			pstm.setInt(4, vo.getProject_id());
+			pstm.setString(1, vo.getName());
+			pstm.setInt(2, vo.getGender());
+			pstm.setString(3, vo.getId());
+			pstm.setString(4, vo.getPw());
+			pstm.setInt(5, vo.getProject_id());
+			pstm.setInt(6, vo.getDeptno());
+			
+			
 
-			pstm.execute();
-			Commit(conn);
+			res = pstm.executeUpdate();
+			if(res>0) {
+				System.out.println("성공");
+				Commit(conn);
+			}
+			
 
 			// 쿼리를 실행한다.
 			/*
@@ -170,7 +184,7 @@ public class MemberDAO implements MemberSql {
 		try {
 			pstm = conn.prepareCall(delete_member);
 			// ?의 매개변수에 값을 전달
-			pstm.setInt(1, vo.getId());
+			pstm.setString(1, vo.getId());
 			// 삭제 실행 후 결과를 리턴
 			res = pstm.executeUpdate(); // insert, delete, update query
 			if (res > 0) {
@@ -185,4 +199,5 @@ public class MemberDAO implements MemberSql {
 		return res;
 	}
 
+	
 }

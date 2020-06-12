@@ -3,33 +3,37 @@ package vo;
 
 public class Member {
 
-	private int id;
+	private String id;  //사번이자 회원가입시 ID
     private String name;
     private int gender;
     private int project_id;
     private int deptno;
+    private String pw;
+    
+    
     
     public static final int Male = 0;
     public static final int Female = 1;
 
-	public Member(int id, String name, int gender, int project_id, int deptno) {
+	public Member(String name, int gender, String id, String pw, int project_id, int deptno) {
 		super();
     	this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.project_id = project_id;
 		this.deptno = deptno;
+		this.pw=pw;
 	}
 
 	public Member() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -63,6 +67,15 @@ public class Member {
 
 	public void setDeptno(int deptno) {
 		this.deptno = deptno;
+	}
+
+
+	public String getPw() {
+		return pw;
+	}
+
+	public void setpw(String pw) {
+		this.pw = pw;
 	}
 
 }
