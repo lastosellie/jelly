@@ -44,14 +44,15 @@ public class TodoDAO implements TodoSql {
 		return res;
 	}
 
-	public List<Todo> getSelectAll() {
+	public List<Todo> getSelectProjectId(int projectId) {
 		Todo vo = null;
 		List<Todo> all = new ArrayList<Todo>();
 
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
 		try {
-			pstm = conn.prepareCall(select_all);
+			pstm = conn.prepareCall(select_project_id);
+			pstm.setInt(1, projectId);
 			rs = pstm.executeQuery();
 			while (rs.next()) {
 				vo = new Todo();

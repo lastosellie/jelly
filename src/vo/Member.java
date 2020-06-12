@@ -15,7 +15,18 @@ public class Member {
     public static final int Male = 0;
     public static final int Female = 1;
 
+<<<<<<< HEAD
 	public Member(String name, int gender, String id, String pw, int project_id, int deptno) {
+=======
+    public Member(String name, int gender) {
+		super();
+    	this.id = id;
+		this.name = name;
+		this.gender = gender;
+	}
+    
+	public Member(int id, String name, int gender, int project_id, int deptno) {
+>>>>>>> a9efd96bcf0db55f15f845fad8c0fcf89a605575
 		super();
     	this.id = id;
 		this.name = name;

@@ -55,8 +55,6 @@ public class ChatController implements Initializable, IClient{
 	
 	@FXML
 	private Button Exit;
-
-	private ChatClient client;
 	
 	Calendar calendar = Calendar.getInstance();
 	SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
@@ -198,7 +196,7 @@ public class ChatController implements Initializable, IClient{
 			String format = String.format("%d_%02d%02d_%02d%02d_%s.txt", time.get(Calendar.YEAR),
 					time.get(Calendar.MONTH)+1,time.get(Calendar.DAY_OF_MONTH),
 					time.get(Calendar.HOUR_OF_DAY),time.get(Calendar.MINUTE),
-					client.userName);
+					ClientInfo.UserName);
 				
 			try {
 				FileOutputStream fos = new FileOutputStream(new File(format));

@@ -45,7 +45,7 @@ public class JChatServerThread implements Runnable {
 		int command = jd.getCommand();
 		switch (command) {
 		case JRequestData.GET_TODO:
-			List<Todo> todoList = new TodoBiZ().getSelectAll();
+			List<Todo> todoList = new TodoBiZ().getSelectProjectId(jd.getProjectId());
 			jd.setTodoList(todoList);
 			oos.writeObject(jd);
 			break;
