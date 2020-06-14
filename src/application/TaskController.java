@@ -20,6 +20,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -189,6 +190,7 @@ public class TaskController implements Initializable {
 				dialog.setTitle("PROJECT LIST");
 				dialog.setScene(scene);
 				dialog.setResizable(false);
+				dialog.getIcons().add(new Image("file:image/jicon.png"));
 				dialog.show();
 				dialog.setOnHidden(e -> {
 					this.dialog = null;
@@ -492,14 +494,15 @@ public class TaskController implements Initializable {
 		dialog.initStyle(StageStyle.DECORATED);
 		Parent parent;
 		try {
-			parent = FXMLLoader.load(getClass().getResource("ProjectDialog.fxml"));
+			parent = FXMLLoader.load(getClass().getResource("NewProjectDialog.fxml"));
 			Scene scene = new Scene(parent);
 			dialog.setScene(scene);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		dialog.setResizable(false);
-		dialog.setTitle("New Todo");
+		dialog.getIcons().add(new Image("file:image/jicon.png"));
+		dialog.setTitle("New Project");
 		dialog.showAndWait();
 
 		changeCalendar(nYear, nMonth);

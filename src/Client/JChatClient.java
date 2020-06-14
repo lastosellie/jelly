@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.time.LocalDate;
 import java.util.HashSet;
 
 import application.ClientInfo;
 import application.IClient;
+import application.IniFile;
 import server.JChatData;
 
 public class JChatClient implements Runnable {
@@ -27,8 +29,15 @@ public class JChatClient implements Runnable {
 	public JChatClient() {
 		serverName = "127.0.0.1";
 		port = 5555;
+
+		IniFile ini = new IniFile();
+		if (ini.isLoaded()) {
+			serverName = ini.getIp();
+			port = Integer.parseInt(ini.getPort());
+		}
+
 		subscribers = new HashSet<>();
-		
+
 		start();
 	}
 
@@ -41,11 +50,8 @@ public class JChatClient implements Runnable {
 			socket = new Socket(serverName, port);
 			oos = new ObjectOutputStream(socket.getOutputStream());
 			ois = new ObjectInputStream(socket.getInputStream());
-
-			JChatData d = new JChatData(ClientInfo.UserName, "님이 접속하였습니다. ", JChatData.FIRST_CONNECTION, "");
-			oos.writeObject(d);
 			System.out.println("Client : Server 접속");
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -58,6 +64,7 @@ public class JChatClient implements Runnable {
 		while (!stop) {
 			try {
 				Object obj = ois.readObject(); // 서버에서 보낸 내용 받기
+				System.out.println("subscribers수 : " + subscribers.size());
 				for (IClient subscriber : subscribers) {
 					subscriber.receive(obj);
 				}
@@ -90,7 +97,7 @@ public class JChatClient implements Runnable {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void sendToServer(IClient sender, Object data) {
 		try {
 			subscribers.add(sender);
@@ -101,4 +108,9 @@ public class JChatClient implements Runnable {
 			e.printStackTrace();
 		}
 	}
+
+	public HashSet<IClient> getSubscribers() {
+		return subscribers;
+	}
+	
 }

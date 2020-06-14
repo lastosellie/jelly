@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
    <center>
       <GridPane fx:id="grid" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -25,22 +25,22 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="20.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="0.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="0.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="ID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="PW" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="NAME" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="TeamID" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="teamid" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="name" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Label text="TeamID" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="nameTxd" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor></TextField>
@@ -49,24 +49,27 @@
                   <Insets bottom="30.0" left="140.0" />
                </GridPane.margin>
             </Button>
-            <TextField fx:id="id" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ImageView fitHeight="117.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <TextField fx:id="idTxd" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fitHeight="117.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../../image/icon1.png" />
                </image>
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
             </ImageView>
-            <ImageView fitHeight="96.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fitHeight="96.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../../image/가입하기.png" />
                </image>
                <GridPane.margin>
-                  <Insets top="50.0" />
+                  <Insets top="45.0" />
                </GridPane.margin>
             </ImageView>
-            <Label text="DEPTNO" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="deptno" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="DEPTNO" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="deptno" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <Label text="Gender" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <PasswordField fx:id="pw" onAction="#handleSignup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <PasswordField fx:id="pwPf" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="MALE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <toggleGroup>
                   <ToggleGroup fx:id="pickGender" />

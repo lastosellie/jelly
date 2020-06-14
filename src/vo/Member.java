@@ -1,39 +1,25 @@
 package vo;
 
-
 public class Member {
 
-	private String id;  //사번이자 회원가입시 ID
-    private String name;
-    private int gender;
-    private int project_id;
-    private int deptno;
-    private String pw;
-    
-    
-    
-    public static final int Male = 0;
-    public static final int Female = 1;
+	private String id; // 사번이자 회원가입시 ID
+	private String name;
+	private int gender;
+	private int project_id;
+	private int deptno;
+	private String pw;
 
-<<<<<<< HEAD
+	public static final int Male = 0;
+	public static final int Female = 1;
+
 	public Member(String name, int gender, String id, String pw, int project_id, int deptno) {
-=======
-    public Member(String name, int gender) {
 		super();
-    	this.id = id;
-		this.name = name;
-		this.gender = gender;
-	}
-    
-	public Member(int id, String name, int gender, int project_id, int deptno) {
->>>>>>> a9efd96bcf0db55f15f845fad8c0fcf89a605575
-		super();
-    	this.id = id;
+		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.project_id = project_id;
 		this.deptno = deptno;
-		this.pw=pw;
+		this.pw = pw;
 	}
 
 	public Member() {
@@ -80,7 +66,6 @@ public class Member {
 		this.deptno = deptno;
 	}
 
-
 	public String getPw() {
 		return pw;
 	}
@@ -89,6 +74,15 @@ public class Member {
 		this.pw = pw;
 	}
 
+	@Override
+	public String toString() {
+		String gender = null;
+		if (this.gender == Member.Female) {
+			gender = "여성";
+		} else {
+			gender = "남성";
+		}
+		return String.format("이름 : %s 아이디 : %s 성별 : %s", this.name, this.id, gender);
+	}
+
 }
-
-

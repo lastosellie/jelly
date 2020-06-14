@@ -1,40 +1,95 @@
 package dao;
 
-import java.util.*;
+import static common.JDBCTemplate.Close;
+import static common.JDBCTemplate.Commit;
+import static common.JDBCTemplate.Rollback;
 
-import Client.JChatClient;
-import biz.MemberBiZ;
-import oracle.jdbc.OracleCallableStatement;
-import oracle.jdbc.OracleTypes;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.sql.*;
-import vo.*; // Emp vo
-import static common.JDBCTemplate.*;
-// CRUD를 실행하는 db sql 코드
+import vo.Member;
+import vo.Todo;
 
 public class MemberDAO implements MemberSql {
-	
-	
 
-	private Connection conn;
+	protected Connection conn;
 
 	public MemberDAO(Connection conn) {
 		this.conn = conn;
 	}
 
-	public int createMemberTable() {
+	public List<Member> getSelectAll() {
+		Member vo = null;
+		List<Member> all = new ArrayList<Member>();
+
 		PreparedStatement pstm = null;
-		int res = 0;
+		ResultSet rs = null;
 		try {
-			pstm = conn.prepareStatement(create_table);
-			pstm.setString(1, "MEMBER");
-			pstm.setString(2, create_member);
-			pstm.setString(3, "");
+			pstm = conn.prepareCall(select_all);
+			rs = pstm.executeQuery();
+			while (rs.next()) {
+				vo = new Member();
+				vo.setName(rs.getString("MEMBR_NAME"));
+				vo.setGender(rs.getInt("GENDER"));
+				vo.setId(rs.getString("EMPNO"));
+				all.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Close(rs);
+			Close(pstm);
+		}
+		return all;
+	}
+
+	public Member getSelectVO(String empno) {
+		Member vo = null;
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		try {
+			pstm = conn.prepareCall(select_vo);
+			pstm.setString(1, empno);
+			rs = pstm.executeQuery();
+			if (rs.next()) {
+				vo = new Member();
+				vo.setName(rs.getString("MEMBR_NAME"));
+				vo.setGender(rs.getInt("GENDER"));
+				vo.setId(rs.getString("EMPNO"));
+				vo.setpw(rs.getString("PASSWORD"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Close(rs);
+			Close(pstm);
+		}
+		return vo;
+	}
+
+	public int getInsertVO(Member member) {
+		int res = 0;
+		PreparedStatement pstm = null;
+		try {
+			pstm = conn.prepareStatement(insert_member);
+			pstm.setString(1, member.getName());
+			pstm.setInt(2, member.getGender());
+			pstm.setString(3, member.getId());
+			pstm.setString(4, member.getPw());
 			res = pstm.executeUpdate();
 			if (res > 0) {
-				System.out.println("MEMBER 테이블 생성 성공");
+				System.out.println("입력 성공");
 				Commit(conn);
 			}
+		} catch (SQLIntegrityConstraintViolationException e) {
+			// 이미 등록된 아이디 처리
+			res = -1;
+			Rollback(conn);
 		} catch (Exception e) {
 			System.out.println(e);
 			Rollback(conn);
@@ -44,160 +99,4 @@ public class MemberDAO implements MemberSql {
 		return res;
 	}
 
-	public List<Member> getSelectAll() {
-		Member res = null; // 레코드 한줄 담을 객체
-		List<Member> all = new ArrayList<Member>(); // EMP 전체 리턴받을 객체
-
-		// 명령수행객체
-		Statement stmt = null;
-		ResultSet rs = null;
-		try {
-			stmt = conn.createStatement();
-			;
-			rs = stmt.executeQuery(select_all);
-			while (rs.next()) {
-				res = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
-				res.setId(rs.getString("ID"));
-				res.setName(rs.getString("NAME"));
-				all.add(res);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			Close(rs);
-			Close(stmt);
-		}
-
-		return all;
-	}
-
-	// 사번으로 검색
-	public Member getSelectES(int id) throws Exception {
-
-		Member vo = null;
-		PreparedStatement stmt = null;
-		ResultSet rs = null;
-		try {
-			stmt = conn.prepareStatement(select_es);
-			stmt.setInt(1, id);
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
-
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			Close(rs);
-			Close(stmt);
-		}
-
-		return vo;
-	}
-
-	// 이름으로 검색
-	public Member getSelectEname(String name) throws Exception {
-		Member vo = null;
-		PreparedStatement stmt = null;
-		ResultSet rs = null;
-		try {
-			stmt = conn.prepareStatement(select_ename);
-			stmt.setString(1, name);
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
-
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			Close(rs);
-			Close(stmt);
-		}
-
-		return vo;
-	}
-
-	// 사번으로 그룹바이해서 ename 셀렉
-	public Member SelectProject(int id) throws Exception {
-		Member vo = null;
-		PreparedStatement stmt = null;
-		ResultSet rs = null;
-		try {
-			stmt = conn.prepareStatement(select_projectid);
-			stmt.setInt(1, id);
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				vo = new Member(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),rs.getInt(5),rs.getInt(6));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			Close(rs);
-			Close(stmt);
-		}
-
-		return vo;
-	}
-
-	
-	//회원가입 name, gender, id(사번), pw, teamid, deptno
-	public int InsertAll(Member vo) throws Exception {
-		int res = 0;
-		PreparedStatement pstm = null;
-		try {
-			pstm = conn.prepareStatement(insert_member); // 쿼리 호출
-
-			pstm.setString(1, vo.getName());
-			pstm.setInt(2, vo.getGender());
-			pstm.setString(3, vo.getId());
-			pstm.setString(4, vo.getPw());
-			pstm.setInt(5, vo.getProject_id());
-			pstm.setInt(6, vo.getDeptno());
-			
-			
-
-			res = pstm.executeUpdate();
-			if(res>0) {
-				System.out.println("성공");
-				Commit(conn);
-			}
-			
-
-			// 쿼리를 실행한다.
-			/*
-			 * res = pstm.executeUpdate(); // insert, delete, update 할때 사용 if(res > 0) {
-			 * System.out.println("입력확인했어"); Commit(conn); }
-			 */
-		} catch (Exception e) {
-			Rollback(conn);
-		} finally {
-
-			Close(pstm);
-		}
-		return res;
-	}
-
-	public int DeleteAll(Member vo) {
-		int res = 0; // 삭제 결과 저장할 변수
-		CallableStatement pstm = null; // sql문장에 매개벼수 ? 를 사용하기 때문이다.
-		try {
-			pstm = conn.prepareCall(delete_member);
-			// ?의 매개변수에 값을 전달
-			pstm.setString(1, vo.getId());
-			// 삭제 실행 후 결과를 리턴
-			res = pstm.executeUpdate(); // insert, delete, update query
-			if (res > 0) {
-				Commit(conn);
-			}
-		} catch (Exception e) {
-			Rollback(conn);
-		} finally {
-
-			Close(pstm);
-		}
-		return res;
-	}
-
-	
 }

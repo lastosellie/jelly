@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -10,34 +16,43 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="-Infinity" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
          <image>
             <Image url="@../../image/avatar1.png" />
          </image>
       </ImageView>
-      <Label fx:id="nameLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0">
+      <Label fx:id="nameLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
          <HBox.margin>
-            <Insets left="20.0" right="20.0" />
+            <Insets left="20.0" />
          </HBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
       </Label>
       <GridPane>
          <children>
-            <Label fx:id="offlineLabel" alignment="CENTER" prefHeight="25.0" prefWidth="137.0" style="-fx-border-radius: 120; -fx-border-color: black;" text="OFFLINE" textAlignment="CENTER" textFill="#221e1e">
+            <Label fx:id="offlineLabel" alignment="CENTER" prefHeight="25.0" prefWidth="60.0" text="OFFLINE" textAlignment="CENTER" textFill="#221e1e">
                <font>
                   <Font name="Calibri Light" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="onlineLabel" alignment="CENTER" prefHeight="25.0" prefWidth="137.0" style="-fx-border-radius: 120; -fx-border-color: black;" text="ONLINE" textAlignment="CENTER" textFill="#eb0808">
+            <Label fx:id="onlineLabel" alignment="CENTER" prefHeight="25.0" prefWidth="60.0" text="ONLINE" textAlignment="CENTER" textFill="#eb0808">
                <font>
                   <Font name="Calibri Light" size="12.0" />
                </font>
             </Label>
          </children>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
       </GridPane>
    </children>
    <padding>

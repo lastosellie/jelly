@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Vector;
 
 public class JChatData implements Serializable {
+	private String id;
 	private String name;
 	private String receiver;
 	private String message;
@@ -19,30 +20,21 @@ public class JChatData implements Serializable {
 	public static final int CHAT_MESSAGE = 1;
 	public static final int CHAT_WHISPER = 2;
 
-	public JChatData() {
-	}
-
-	public JChatData(String name, String message, int state, String timestamp, ObjectOutputStream o) {
-		super();
+	public JChatData(String id, String name, String message, int state, String timestamp) {
+		this.id = id;
 		this.name = name;
 		this.message = message;
-		this.state = state;
-		this.oos = o;
-		this.timestamp = timestamp;
-
-	}
-
-	public JChatData(String name, String message, int state, String timestamp) {
-		this(name, message, state, timestamp, null);
-	}
-
-	public JChatData(String name, String receiver, String message, int state, String timestamp) {
-		this.name = name;
-		this.receiver = receiver;
 		this.message = message;
 		this.state = state;
 		this.timestamp = timestamp;
+	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getName() {

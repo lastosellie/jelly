@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
@@ -11,63 +16,70 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" stylesheets="@Project.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" percentWidth="35.0" />
+    <ColumnConstraints hgrow="SOMETIMES" percentWidth="65.0" />
   </columnConstraints>
   <rowConstraints>
 	<RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
-	<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-	<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <TreeTableView fx:id="treeTableView" onMouseClicked="#treeTableViewSelected" showRoot="false" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></TreeTableView>
-      <ListView fx:id="memberList" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <center>
+            <ListView fx:id="memberList" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
       <BorderPane GridPane.columnIndex="1">
          <right>
-            <GridPane prefWidth="300.0" BorderPane.alignment="CENTER">
+            <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#newButtonClicked" prefWidth="250.0" text="New Todo">
+                  <Button mnemonicParsing="false" onMouseClicked="#newButtonClicked" prefWidth="100.0" text="New Todo">
                      <GridPane.margin>
                         <Insets left="10.0" right="10.0" />
                      </GridPane.margin></Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#deleteButtonClicked" prefWidth="250.0" text="Delete Todo" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" onMouseClicked="#deleteButtonClicked" prefWidth="100.0" text="Delete Todo" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="10.0" right="20.0" />
                      </GridPane.margin></Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#moveChatClicked" prefWidth="100.0" text="채팅하기" GridPane.columnIndex="2" />
                </children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
             </GridPane>
          </right>
       </BorderPane>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <center>
-            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-         </center>
+      <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="2">
          <bottom>
-            <BorderPane BorderPane.alignment="CENTER">
-               <right>
-                  <Button fx:id="sendBtn" mnemonicParsing="false" onMouseClicked="#sendJChatDataClicked" text="SendJChatData" BorderPane.alignment="CENTER" />
-               </right>
-               <center>
-                  <TextField fx:id="textField" BorderPane.alignment="CENTER" />
-               </center>
-               <left>
-                  <Button mnemonicParsing="false" onMouseClicked="#sendJellyClicked" text="SendJelly" BorderPane.alignment="CENTER" />
-               </left>
-            </BorderPane>
+            <BorderPane BorderPane.alignment="CENTER" />
          </bottom>
+         <center>
+            <TextArea fx:id="contentTaa" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
+      <Label fx:id="projectNameLb">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
 
    </children>
 </GridPane>

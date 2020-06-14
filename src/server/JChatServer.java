@@ -3,6 +3,7 @@ package server;
 import java.net.*;
 import java.util.*;
 
+import application.IniFile;
 import biz.MemberBiZ;
 import biz.TodoBiZ;
 
@@ -20,7 +21,12 @@ public class JChatServer {
 	public void service() {
 		try {
 			System.out.println("접속을 준비하고 있습니다.");
-			serverSocket = new ServerSocket(5555);
+			int port = 5555;
+			IniFile ini = new IniFile();
+			if (ini.isLoaded()) {
+				port = Integer.parseInt(ini.getPort());
+			}
+			serverSocket = new ServerSocket(port);
 		} catch (IOException e) {
 			System.err.println("서비스 준비중에 오류가 발생했습니다.");
 		}
@@ -43,8 +49,6 @@ public class JChatServer {
 
 	public static void main(String[] args) {
 		System.out.println("Start Server Service....");
-		new MemberBiZ().createMemberTable();
-		new TodoBiZ().createTodoTable();
 		JChatServer cs = new JChatServer();
 		cs.buffer = new Vector<Object>(5, 1);
 		cs.service();

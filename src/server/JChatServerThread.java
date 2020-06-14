@@ -41,7 +41,7 @@ public class JChatServerThread implements Runnable {
 
 	public void acceptJData(JRequestData jd) throws IOException {
 		System.out.println("Server : JData ¼ö½Å");
-		
+
 		int command = jd.getCommand();
 		switch (command) {
 		case JRequestData.GET_TODO:
@@ -49,15 +49,12 @@ public class JChatServerThread implements Runnable {
 			jd.setTodoList(todoList);
 			oos.writeObject(jd);
 			break;
-		case JRequestData.ADD_TODO: 
+		case JRequestData.ADD_TODO:
 			new TodoBiZ().getInsertVO(jd.getTodo());
-			jd.setTodo(null);
-			jd.setResult(1);
 			oos.writeObject(jd);
 			break;
 		case JRequestData.DEL_TODO:
 			new TodoBiZ().getDeleteVO(jd.getTodoId());
-			jd.setResult(1);
 			oos.writeObject(jd);
 			break;
 		}
@@ -69,8 +66,8 @@ public class JChatServerThread implements Runnable {
 		switch (state) {
 		case Data.FIRST_CONNECTION:
 			jd.setOos(oos);
-			Vector<String> users = new Vector<String>(5, 1);
 			buffer.addElement(jd);
+			Vector<String> users = new Vector<String>(5, 1);
 			for (int i = 0; i < buffer.size(); i++) {
 				if (buffer.elementAt(i) instanceof JChatData) {
 					users.addElement(((JChatData) buffer.elementAt(i)).getName());
@@ -88,12 +85,6 @@ public class JChatServerThread implements Runnable {
 				}
 			}
 			broadCasting(jd);
-			try {
-				ois.close();
-				oos.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 			break;
 		case Data.CHAT_MESSAGE:
 			broadCasting(jd);
