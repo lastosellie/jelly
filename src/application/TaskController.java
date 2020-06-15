@@ -278,7 +278,7 @@ public class TaskController implements Initializable {
 				paramMap.put("inputDate", inputDate);
 				taskList = service.getAllCal(paramMap);
 
-				paramMap.put("inputDate", i);
+				//paramMap.put("inputDate", i);
 				hboxList1[i].setUserData(paramMap);
 				hboxList2[i].setUserData(paramMap);
 
