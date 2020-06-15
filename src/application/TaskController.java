@@ -439,50 +439,6 @@ public class TaskController implements Initializable {
 		today();
 	}
 
-	@FXML
-	void clickGrid(MouseEvent e) throws IOException {
-		// 클릭한 날짜를 얻어오는 것
-		for (Node node : grid.getChildren()) {
-			if (node instanceof VBox) {
-				((VBox) node).setOnMouseClicked(ee -> {
-					clickDate = ((Label) (((VBox) (ee.getSource())).getChildren().get(1))).getText();
-					if (clickDate.length() > 2) {
-						clickDate = clickDate.substring(0, 2);
-						try {
-							Integer.parseInt(clickDate);
-						} catch (Exception e2) {
-							clickDate = clickDate.substring(0, 1);
-						}
-					}
-					clickYear = nYear;
-					clickMonth = nMonth;
-
-					if (e.getClickCount() == 2) {
-						node.setStyle("-fx-border-color: #fe4371; -fx-border-width: 2;");
-						try {
-							// detail뷰를 띄우는 곳
-							Parent detail = FXMLLoader.load(getClass().getResource("detailCalendar.fxml"));
-							Scene scene = new Scene(detail);
-							Stage stage = new Stage();
-							stage.setX(1000);
-							stage.setY(200);
-							stage.setScene(scene);
-							stage.setTitle("datailMail");
-							stage.showAndWait();
-
-							changeCalendar(clickYear, clickMonth);
-							node.setStyle(
-									"-fx-border-color: white black black white; -fx-border-style:  segments(3, 3, 3, 3);");
-						} catch (IOException e1) {
-							e1.printStackTrace();
-						}
-					}
-				});
-			}
-		}
-
-	}
-
 	// get
 	public String getClickDate() {
 		return clickDate;
