@@ -214,10 +214,10 @@ public class ProjectController implements Initializable, IClient {
 				System.out.println(this.projectId + "투두리스트 갱신 요청");
 				break;
 			case JRequestData.GET_TODO:
-				System.out.println(this.projectId + todoList.size() + "투두리스트 get이벤트 옴");
+				System.out.println(this.projectId + "," + todoList.size() + "투두리스트 get이벤트 옴");
 				if (jd.getProjectId() == this.projectId) {
 					todoList = jd.getTodoList();
-					System.out.println(this.projectId + todoList.size() + "투두리스트 갱신됨");
+					System.out.println(this.projectId + "," + todoList.size() + "투두리스트 갱신됨");
 					refreshTodoList();
 				}
 				break;

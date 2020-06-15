@@ -9,6 +9,8 @@ import org.ini4j.Wini;
 
 public class IniFile {
 
+	private static IniFile instance = new IniFile();
+
 	private boolean isLoaded;
 	private String ip;
 	private String port;
@@ -30,6 +32,10 @@ public class IniFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static IniFile getInstance() {
+		return instance;
 	}
 
 	public boolean isLoaded() {
