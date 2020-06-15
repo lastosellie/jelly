@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import application.IniFile;
+
 /*Connection & Close & Commit & rollback*/
 public class JDBCTemplate {
 	
@@ -16,7 +18,12 @@ public class JDBCTemplate {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String serverName = "localhost";
+		IniFile ini = new IniFile();
+		if (ini.isLoaded()) {
+			serverName = ini.getIp();
+		}
+		String url = "jdbc:oracle:thin:@" + serverName + ":1521:XE";
 		String id = "big5";
 		String pwd = "admin1234";
 		Connection con = null;
