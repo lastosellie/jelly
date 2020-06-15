@@ -19,7 +19,7 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 		String serverName = "localhost";
-		IniFile ini = new IniFile();
+		IniFile ini = IniFile.getInstance();
 		if (ini.isLoaded()) {
 			serverName = ini.getIp();
 		}

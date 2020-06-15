@@ -1,9 +1,12 @@
 package application;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 import com.sun.javafx.scene.control.skin.TextFieldSkin;
 
+import Client.JChatClient;
 import biz.MemberBiZ;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,8 +67,20 @@ public class LoginController {
 		return true;
 	}
 
+	public boolean isSeverAlive() {
+		if (!JChatClient.getInstance().isLoaded()) {
+			errorMsg(AlertType.ERROR, "서버 연결 오류 !", "서버와의 통신에 실패하였습니다. 서버 연결 정보를 확인해 주세요.");
+			return false;
+		}
+
+		return true;
+	}
+
 	@FXML
 	public void MouseClicked(MouseEvent event) {
+		if (!isSeverAlive()) {
+			return;
+		}
 
 		if (isMemberInfoValid() == false) {
 			return;
@@ -87,6 +102,10 @@ public class LoginController {
 
 	@FXML
 	public void signinClicked(MouseEvent event) {
+		if (!isSeverAlive()) {
+			return;
+		}
+
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.DECORATED);
 		try {

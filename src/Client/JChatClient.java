@@ -4,13 +4,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.time.LocalDate;
 import java.util.HashSet;
 
-import application.ClientInfo;
 import application.IClient;
 import application.IniFile;
-import server.JChatData;
 
 public class JChatClient implements Runnable {
 
@@ -21,7 +18,7 @@ public class JChatClient implements Runnable {
 	ObjectInputStream ois;
 	private Thread listener;
 	private boolean stop = false;
-
+	private boolean isLoaded = false;
 	private String serverName;
 	private int port = 5555;
 	private HashSet<IClient> subscribers;
@@ -30,7 +27,7 @@ public class JChatClient implements Runnable {
 		serverName = "127.0.0.1";
 		port = 5555;
 
-		IniFile ini = new IniFile();
+		IniFile ini = IniFile.getInstance();
 		if (ini.isLoaded()) {
 			serverName = ini.getIp();
 			port = Integer.parseInt(ini.getPort());
@@ -54,8 +51,11 @@ public class JChatClient implements Runnable {
 
 		} catch (IOException e) {
 			e.printStackTrace();
+			isLoaded = false;
+			return;
 		}
 
+		isLoaded = true;
 		listener = new Thread(this);
 		listener.start();
 	}
@@ -112,5 +112,9 @@ public class JChatClient implements Runnable {
 	public HashSet<IClient> getSubscribers() {
 		return subscribers;
 	}
-	
+
+	public boolean isLoaded() {
+		return isLoaded;
+	}
+
 }
