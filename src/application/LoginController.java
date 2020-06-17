@@ -117,7 +117,7 @@ public class LoginController {
 			e.printStackTrace();
 		}
 		dialog.setResizable(false);
-		dialog.getIcons().add(new Image("file:image/jicon.png"));
+		dialog.getIcons().add(new Image("/jicon.png"));
 		dialog.show();
 	}
 

@@ -32,8 +32,8 @@ public class MemberListViewControl {
     {
 		//System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		
-		wImage = new Image("file:image/avatar1.png");
-		mImage = new Image("file:image/avatar3.png");
+		wImage = new Image("/avatar1.png");
+		mImage = new Image("/avatar3.png");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberListViewCell.fxml"));
         fxmlLoader.setController(this);
         try

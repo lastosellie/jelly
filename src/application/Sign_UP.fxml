@@ -52,7 +52,7 @@
             <TextField fx:id="idTxd" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <ImageView fitHeight="117.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
-                  <Image url="@../../image/icon1.png" />
+                  <Image url="/icon1.png" />
                </image>
                <GridPane.margin>
                   <Insets top="40.0" />
@@ -60,7 +60,7 @@
             </ImageView>
             <ImageView fitHeight="96.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
-                  <Image url="@../../image/가입하기.png" />
+                  <Image url="/가입하기.png" />
                </image>
                <GridPane.margin>
                   <Insets top="45.0" />

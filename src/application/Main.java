@@ -10,7 +10,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			primaryStage.getIcons().add(new Image("file:image/jicon.png"));
+			primaryStage.getIcons().add(new Image("/jicon.png"));
 
 			primaryStage.setTitle("Jelly");
 

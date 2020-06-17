@@ -21,7 +21,7 @@
          <children>
             <ImageView fitHeight="201.0" fitWidth="211.0" layoutX="95.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../image/mainima.PNG" />
+                  <Image url="/mainima.PNG" />
                </image>
             </ImageView>
             <TextField fx:id="idTfd" layoutX="92.0" layoutY="334.0" prefHeight="44.0" prefWidth="218.0" promptText="아이디" />

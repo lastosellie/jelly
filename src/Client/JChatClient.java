@@ -24,9 +24,7 @@ public class JChatClient implements Runnable {
 	private HashSet<IClient> subscribers;
 
 	public JChatClient() {
-		serverName = "127.0.0.1";
-		port = 5555;
-
+		
 		IniFile ini = IniFile.getInstance();
 		if (ini.isLoaded()) {
 			serverName = ini.getIp();

@@ -20,7 +20,7 @@
    <children>
       <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
          <image>
-            <Image url="@../../image/avatar1.png" />
+            <Image url="/avatar1.png" />
          </image>
       </ImageView>
       <Label fx:id="nameLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0">

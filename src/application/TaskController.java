@@ -190,7 +190,7 @@ public class TaskController implements Initializable {
 				dialog.setTitle("PROJECT LIST");
 				dialog.setScene(scene);
 				dialog.setResizable(false);
-				dialog.getIcons().add(new Image("file:image/jicon.png"));
+				dialog.getIcons().add(new Image("/jicon.png"));
 				dialog.show();
 				dialog.setOnHidden(e -> {
 					this.dialog = null;

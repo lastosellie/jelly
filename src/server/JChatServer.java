@@ -21,7 +21,7 @@ public class JChatServer {
 	public void service() {
 		try {
 			System.out.println("접속을 준비하고 있습니다.");
-			int port = 5555;
+			int port = 9999;
 			IniFile ini = IniFile.getInstance();
 			if (ini.isLoaded()) {
 				port = Integer.parseInt(ini.getPort());

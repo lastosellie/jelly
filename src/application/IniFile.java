@@ -12,15 +12,21 @@ public class IniFile {
 	private static IniFile instance = new IniFile();
 
 	private boolean isLoaded;
-	private String ip;
-	private String port;
+	private String ip = "192.168.3.32";
+	private String port = "9999";
 
 	public IniFile() {
 		try {
 			File file = new File("jelly.ini");
 			if (!file.exists()) {
-				isLoaded = false;
-				return;
+				if (file.createNewFile()) {
+					Wini ini = new Wini(file);
+					ini.put("CommsInfo", "Ip", ip);
+					ini.put("CommsInfo", "Port", port);
+					ini.store();
+				} else {
+					isLoaded = false;
+				}
 			}
 			Wini ini = new Wini();
 			ini.load(new FileReader(file));

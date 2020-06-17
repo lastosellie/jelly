@@ -178,7 +178,7 @@ public class ProjectController implements Initializable, IClient {
 		}
 		dialog.setResizable(false);
 		dialog.setTitle("New Todo");
-		dialog.getIcons().add(new Image("file:image/jicon.png"));
+		dialog.getIcons().add(new Image("/jicon.png"));
 		dialog.show();
 	}
 
@@ -241,7 +241,7 @@ public class ProjectController implements Initializable, IClient {
 			}
 			chatDialog.setResizable(false);
 			chatDialog.setTitle("Chatting");
-			chatDialog.getIcons().add(new Image("file:image/jicon.png"));
+			chatDialog.getIcons().add(new Image("/jicon.png"));
 			chatDialog.show();
 			chatDialog.setOnHiding(new EventHandler<WindowEvent>() {
 
