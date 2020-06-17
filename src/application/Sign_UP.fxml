@@ -60,7 +60,7 @@
             </ImageView>
             <ImageView fitHeight="96.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
-                  <Image url="/가입하기.png" />
+                  <Image url="/signup.png" />
                </image>
                <GridPane.margin>
                   <Insets top="45.0" />
